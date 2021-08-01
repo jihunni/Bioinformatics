@@ -1,7 +1,36 @@
-# Biology
+# RNA biolgoy
+- [review] A tale of non- canonical tails: gene regulation by post-transcriptional RNA tailing
+
+# General Cancer Biology
+- [2018 간세포종 진료 가이드라인 (대한간암학회, 국립암센터)](https://m.gastrokorea.org/bbs/index.php?code=guide&mode=view&number=1410&)  
+- [Review] The Effects of Conjugated Linoleic Acids on Cancer
+- Recent advances in the molecular mechanism of sex disparity in hepatocellular carcinoma (Review)
+- Glutathione Depletion Induced by c-Myc Downregulation Triggers Apoptosis on Treatment with Alkylating Agents1
+- Testis-specific protein, Y-linked 1 activates PI3K/AKT and RAS signaling pathways through suppressing IGFBP3 expression during tumor progression
+- Elevated expression and potential roles of human Sp5, a member of Sp transcription factor family, in human cancers
+- A Systems Biology Approach to Investigating the Interaction between Serotonin Synthesis by Tryptophan Hydroxylase and the Metabolic Homeostasis
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
+- Characterization of heterogeneous redox responses in hepatocellular carcinoma patients using network analysis   
+- Characterizing and measuring bias in sequence data
+- Genome-scale metabolic modelling of hepatocytes reveals serine deficiency in patients with non-alcoholic fatty liver disease
+  - iHepatocytes2322
+- [protocol] MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
+## tool
+- [Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles](https://www.pnas.org/content/102/43/15545)   
+- edgeR   
+- DESeq2   
+- TCGAbiolinks   
+- A Review of Pathway-Based Analysis Tools That Visualize Genetic Variants   
+## Database
+- NCBI
+- TCGA
+  - GDC Data User's Guide
+  - Before and After: Comparison of Legacy and Harmonized TCGA Genomic Data Commons’ Data
+- cBioPortal
+- ENCODE
+
 
 
 # Structrual Bioinformatics (Computational structural biology)
@@ -12,7 +41,7 @@
 ### Molecular Dynamics
 - [[review] Molecular Dynamics Simulation for All](https://www.cell.com/neuron/pdf/S0896-6273(18)30684-6.pdf)   
 - [[video] Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
-- 
+- [[program] LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
 
 ## Knowledge-based : Homology modeling, Fragments
 
