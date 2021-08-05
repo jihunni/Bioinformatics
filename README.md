@@ -54,6 +54,7 @@
   - key concept: evolutionary coupling, covariation
 
 ## ML/DL
+- [Improved protein structure prediction using potentials from deep learning](https://www.nature.com/articles/s41586-019-1923-7?proof=t)   
 - [Accurate prediction of protein structures and interactions using a three-track neural network | Science, 2021](https://science.sciencemag.org/content/early/2021/07/19/science.abj8754)   
 - [Highly accurate protein structure prediction with AlphaFold | Nature, 2021](https://www.nature.com/articles/s41586-021-03819-2)
 - [`video` AlphaFold : 딥러닝 잠재력을 사용하여 단백질 구조 예측 개선](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&t=3021s)   
