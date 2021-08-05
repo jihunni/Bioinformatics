@@ -16,7 +16,7 @@
 - Characterizing and measuring bias in sequence data
 - Genome-scale metabolic modelling of hepatocytes reveals serine deficiency in patients with non-alcoholic fatty liver disease
   - iHepatocytes2322
-- [protocol] MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
+- `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
 ## tool
 - [Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles](https://www.pnas.org/content/102/43/15545)   
 - edgeR   
@@ -34,21 +34,24 @@
 
 
 # Structrual Bioinformatics (Computational structural biology)
-- [[review] advances in protein structure prediction and design, Nature, 2019](https://www.nature.com/articles/s41580-019-0163-x)   
+- [`review` advances in protein structure prediction and design | Nature, 2019](https://www.nature.com/articles/s41580-019-0163-x)  
+- [`perspective` Macromolecular modeling and design in Rosetta: recent methods and frameworks | Nature methods, 2020](https://www.nature.com/articles/s41592-020-0848-2) 
 ## Experiment : X-ray, NMR, Cryo-EM, Mass spec
 
 ## Physics : Energy potentials, Molecular dynamics
 ### Molecular Dynamics
-- [[review] Molecular Dynamics Simulation for All](https://www.cell.com/neuron/pdf/S0896-6273(18)30684-6.pdf)   
-- [[video] Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
-- [[program] LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
+- [`review` Coarse-Grained Protein Models and Their Applications](https://pubs.acs.org/doi/10.1021/acs.chemrev.6b00163)
+- [`review` Molecular Dynamics Simulation for All](https://www.cell.com/neuron/pdf/S0896-6273(18)30684-6.pdf)   
+- [`video` Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
+- [`program` LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
 
 ## Knowledge-based : Homology modeling, Fragments
 
 ## Evolutionary constraint
-- [[perspective] Protein structure prediction from sequence variation, Nature](https://www.nature.com/articles/nbt.2419)   
+- [Protein 3D Structure Computed from Evolutionary Sequence Variation | 2011](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766)   
+- [`perspective` Protein structure prediction from sequence variation | Nature](https://www.nature.com/articles/nbt.2419)   
   - key concept: evolutionary coupling, covariation
 
 ## ML/DL
-- [Accurate prediction of protein structures and interactions using a three-track neural network, Science, 2021](https://science.sciencemag.org/content/early/2021/07/19/science.abj8754)   
-- [Highly accurate protein structure prediction with AlphaFold, Nature, 2021](https://www.nature.com/articles/s41586-021-03819-2)
+- [Accurate prediction of protein structures and interactions using a three-track neural network | Science, 2021](https://science.sciencemag.org/content/early/2021/07/19/science.abj8754)   
+- [Highly accurate protein structure prediction with AlphaFold | Nature, 2021](https://www.nature.com/articles/s41586-021-03819-2)
