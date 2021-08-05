@@ -45,6 +45,7 @@
 - [`video` Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
 - [`program` LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
 - [Rosetta3: An Object-Oriented Software Suite for the Simulation and Design of Macromolecules](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083816/#)
+- [`review` Protein storytelling through physics | science, 2020](https://science.sciencemag.org/content/370/6520/eaaz3041)
 ## Knowledge-based : Homology modeling, Fragments
 
 ## Evolutionary constraint
@@ -55,3 +56,4 @@
 ## ML/DL
 - [Accurate prediction of protein structures and interactions using a three-track neural network | Science, 2021](https://science.sciencemag.org/content/early/2021/07/19/science.abj8754)   
 - [Highly accurate protein structure prediction with AlphaFold | Nature, 2021](https://www.nature.com/articles/s41586-021-03819-2)
+- [`video` AlphaFold : 딥러닝 잠재력을 사용하여 단백질 구조 예측 개선](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&t=3021s)
