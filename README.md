@@ -44,7 +44,7 @@
 - [`review` Molecular Dynamics Simulation for All](https://www.cell.com/neuron/pdf/S0896-6273(18)30684-6.pdf)   
 - [`video` Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
 - [`program` LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
-
+- [Rosetta3: An Object-Oriented Software Suite for the Simulation and Design of Macromolecules](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083816/#)
 ## Knowledge-based : Homology modeling, Fragments
 
 ## Evolutionary constraint
