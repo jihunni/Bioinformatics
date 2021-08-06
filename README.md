@@ -61,3 +61,10 @@
 - [`video` AlphaFold : 딥러닝 잠재력을 사용하여 단백질 구조 예측 개선](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&t=3021s)   
 - [`review` A review on the attention mechanism of deep learning | 2021](https://www.sciencedirect.com/science/article/pii/S092523122100477X)   
 - `review` [Deep learning techniques have significantly impacted protein structure prediction and protein design | Curr Opin Struct Biol. 2021 ](https://www.sciencedirect.com/science/article/pii/S0959440X21000142?via%3Dihub)
+
+# Genome scale modeling
+- Genome-scale model of metabolism and gene expression provides a multi-scale description of acid stress responses in Escherichia coli | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007525)
+- `review` Reconstructing organisms in silico: genome-scale models and their emerging applications | 2020 | [article](https://www.nature.com/articles/s41579-020-00440-4#Abs1) 
+- `review` Machine and deep learning meet genome-scale metabolic modeling | 2019 | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007084)
+- Machine learning applied to enzyme turnover numbers reveals protein structural correlates and improves metabolic models | 2018 | [article](https://www.nature.com/articles/s41467-018-07652-6)   
+- Kinetic profiling of metabolic specialists demonstrates stability and consistency of in vivo enzyme turnover numbers | PNAS, 2020 | [paper](https://www.pnas.org/content/pnas/117/37/23182.full.pdf?__cf_chl_jschl_tk__=pmd_62a42b6683aa59e3ba029d62943066c076542a4b-1628229665-0-gqNtZGzNAfijcnBszQkO)   
