@@ -45,6 +45,7 @@
 - [`video` Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
 - [`program` LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
 - [Rosetta3: An Object-Oriented Software Suite for the Simulation and Design of Macromolecules](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083816/#)
+- `program` PyRosetta: a script-based interface for implementing molecular modeling algorithms using Rosetta | [paper](https://academic.oup.com/bioinformatics/article/26/5/689/212442) | [program homepage](https://www.pyrosetta.org/)
 - [`review` Protein storytelling through physics | science, 2020](https://science.sciencemag.org/content/370/6520/eaaz3041)
 ## Knowledge-based : Homology modeling, Fragments
 
