@@ -32,11 +32,7 @@
 - cBioPortal
 - ENCODE
 
-# Genome-scale metabolic modeling
-- `review` The growing scope of applications of genome-scale metabolic reconstructions using Escherichia coli
-- Identification of Genome-Scale Metabolic Network Models Using Experimentally Measured Flux Profiles | 2006
-- Genome-Scale Metabolic Modeling of Glioblastoma Reveals Promising Targets for Drug Development | 2020
-- `review` Genome scale metabolic modeling of cancer
+
 
 # Structrual Bioinformatics (Computational structural biology)
 - [`review` advances in protein structure prediction and design | Nature, 2019](https://www.nature.com/articles/s41580-019-0163-x)  
@@ -73,3 +69,7 @@
 - `review` Machine and deep learning meet genome-scale metabolic modeling | 2019 | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007084)
 - Machine learning applied to enzyme turnover numbers reveals protein structural correlates and improves metabolic models | 2018 | [article](https://www.nature.com/articles/s41467-018-07652-6)   
 - Kinetic profiling of metabolic specialists demonstrates stability and consistency of in vivo enzyme turnover numbers | PNAS, 2020 | [paper](https://www.pnas.org/content/pnas/117/37/23182.full.pdf?__cf_chl_jschl_tk__=pmd_62a42b6683aa59e3ba029d62943066c076542a4b-1628229665-0-gqNtZGzNAfijcnBszQkO)   
+- `review` The growing scope of applications of genome-scale metabolic reconstructions using Escherichia coli
+- Identification of Genome-Scale Metabolic Network Models Using Experimentally Measured Flux Profiles | 2006
+- Genome-Scale Metabolic Modeling of Glioblastoma Reveals Promising Targets for Drug Development | 2020
+- `review` Genome scale metabolic modeling of cancer
