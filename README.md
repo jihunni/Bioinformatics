@@ -9,6 +9,7 @@
 - Testis-specific protein, Y-linked 1 activates PI3K/AKT and RAS signaling pathways through suppressing IGFBP3 expression during tumor progression
 - Elevated expression and potential roles of human Sp5, a member of Sp transcription factor family, in human cancers
 - A Systems Biology Approach to Investigating the Interaction between Serotonin Synthesis by Tryptophan Hydroxylase and the Metabolic Homeostasis
+- Cancer Evolution | Nature collection | 2017 | [link](https://www.nature.com/collections/yhyydzgkfk)   
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
@@ -31,7 +32,11 @@
 - cBioPortal
 - ENCODE
 
-
+# Genome-scale metabolic modeling
+- `review` The growing scope of applications of genome-scale metabolic reconstructions using Escherichia coli
+- Identification of Genome-Scale Metabolic Network Models Using Experimentally Measured Flux Profiles | 2006
+- Genome-Scale Metabolic Modeling of Glioblastoma Reveals Promising Targets for Drug Development | 2020
+- `review` Genome scale metabolic modeling of cancer
 
 # Structrual Bioinformatics (Computational structural biology)
 - [`review` advances in protein structure prediction and design | Nature, 2019](https://www.nature.com/articles/s41580-019-0163-x)  
