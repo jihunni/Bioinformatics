@@ -15,6 +15,9 @@
 - A Systems Biology Approach to Investigating the Interaction between Serotonin Synthesis by Tryptophan Hydroxylase and the Metabolic Homeostasis
 - Cancer Evolution | Nature collection | 2017 | [link](https://www.nature.com/collections/yhyydzgkfk)   
 
+# Molecular Biology
+- Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
+- 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
 - Characterization of heterogeneous redox responses in hepatocellular carcinoma patients using network analysis   
@@ -23,10 +26,11 @@
   - iHepatocytes2322
 - `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
 - In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501)
+- 
 ## single cell omics
 - Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
 - Clonal fitness inferred from time-series modelling of single-cell cancer genomes | Nature, 2021 | [paper](https://www.nature.com/articles/s41586-021-03648-3#data-availability) | [Data](https://ega-archive.org/studies/EGAS00001004448)
-- Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
+
 - 
 ## tool
 - [Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles](https://www.pnas.org/content/102/43/15545)   
