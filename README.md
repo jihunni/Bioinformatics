@@ -1,3 +1,7 @@
+# COVID19
+- A metabolic handbook for the COVID-19 pandemic [paper](https://www.nature.com/articles/s42255-020-0237-2)
+- A time-resolved proteomic and prognostic map of COVID-19 | Cell Systems, 2021 | [paper](https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00160-5)
+- 
 # RNA biolgoy
 - [review] A tale of non- canonical tails: gene regulation by post-transcriptional RNA tailing
 
@@ -18,6 +22,12 @@
 - Genome-scale metabolic modelling of hepatocytes reveals serine deficiency in patients with non-alcoholic fatty liver disease
   - iHepatocytes2322
 - `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
+- In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501)
+## single cell omics
+- Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
+- Clonal fitness inferred from time-series modelling of single-cell cancer genomes | Nature, 2021 | [paper](https://www.nature.com/articles/s41586-021-03648-3#data-availability) | [Data](https://ega-archive.org/studies/EGAS00001004448)
+- Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
+- 
 ## tool
 - [Gene set enrichment analysis: A knowledge-based approach for interpreting genome-wide expression profiles](https://www.pnas.org/content/102/43/15545)   
 - edgeR   
