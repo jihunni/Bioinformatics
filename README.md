@@ -26,7 +26,7 @@
   - iHepatocytes2322
 - `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
 - In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501)
-- 
+- A machine learning approach to predict metabolic pathway dynamics from time-series multiomics data
 ## single cell omics
 - Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
 - Clonal fitness inferred from time-series modelling of single-cell cancer genomes | Nature, 2021 | [paper](https://www.nature.com/articles/s41586-021-03648-3#data-availability) | [Data](https://ega-archive.org/studies/EGAS00001004448)
