@@ -25,7 +25,7 @@
 - Genome-scale metabolic modelling of hepatocytes reveals serine deficiency in patients with non-alcoholic fatty liver disease
   - iHepatocytes2322
 - `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
-- In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501)
+- In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501) | [code](https://github.com/noamaus/LSTM-Mutational-series)
 - A machine learning approach to predict metabolic pathway dynamics from time-series multiomics data
 ## single cell omics
 - Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
@@ -45,6 +45,8 @@
   - Before and After: Comparison of Legacy and Harmonized TCGA Genomic Data Commons’ Data
 - cBioPortal
 - ENCODE
+- COSMIC [homepage](https://cancer.sanger.ac.uk/cosmic)
+- 
 
 
 
