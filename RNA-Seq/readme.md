@@ -1,8 +1,8 @@
 # sequence alignment overview
 - procedure   
-  ![image](https://user-images.githubusercontent.com/48517782/129913198-5ac027d0-082b-4ab9-b2a8-2c570af08b3f.png)
+  <img src="https://user-images.githubusercontent.com/48517782/129913198-5ac027d0-082b-4ab9-b2a8-2c570af08b3f.png" width="200px" height="300px" title="" alt=""></img><br/>
 - objective  
-  ![image](https://user-images.githubusercontent.com/48517782/129914645-c7332904-65a3-425b-94fa-7243735532ec.png)
+  ![image](https://user-images.githubusercontent.com/48517782/129914645-c7332904-65a3-425b-94fa-7243735532ec.png){: width="300" height="300"}{: .center}
 
 
 # Data preparation
@@ -55,12 +55,7 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 ```
 
 # STAR alignment
---runThreadN: number of threads
---runMode: genomeGenerate mode
---genomeDir: /path/to/store/genome_indices
---genomeFastaFiles: /path/to/FASTA_file
---sjdbGTFfile: /path/to/GTF_file
---sjdbOverhang: readlength -1
+
 
 ```
 $ /home/bioinfo20165164/program/STAR-2.7.8a/source/STAR --runThreadN 8 \
@@ -72,6 +67,13 @@ $ /home/bioinfo20165164/program/STAR-2.7.8a/source/STAR --runThreadN 8 \
 	--outSAMunmapped Within \
 	--outSAMattributes Standard
 ```
+> options:
+>* --runThreadN: number of threads  
+>* --runMode: genomeGenerate mode  
+>* --genomeDir: /path/to/store/genome_indices  
+>* --genomeFastaFiles: /path/to/FASTA_file  
+>* --sjdbGTFfile: /path/to/GTF_file  
+>* --sjdbOverhang: readlength -1  
 
 ## samtools index
 - Indexing a genome sorted BAM file allows one to quickly extract alignments overlapping particular genomic regions. Moreover, indexing is required by genome viewers such as IGV so that the viewers can quickly display alignments in each genomic region to which you navigate.
@@ -94,9 +96,9 @@ done
 ```
 $ samtools sort star_.bam -o SRR.sam -@ 6
 ```
-  options:
-  -o output file
-  -@ int #set number of sorting and compression threads
+  > options:
+  > -o output file
+  > -@ int #set number of sorting and compression threads
 
   output example: 
   ![image](https://user-images.githubusercontent.com/48517782/129912698-4dfa6d46-7ea2-43d7-b798-ca82983fde7e.png)
