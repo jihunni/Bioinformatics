@@ -27,6 +27,7 @@
 - The clonal evolution of metastatic colorectal cancer
 - Genomic evolution and diverse models of systemic metastases in colorectal cancer
 - Integrated Multiregional Analysis Proposing a New Model of Colorectal Cancer Evolution 
+- `review` Clinical implications of intratumor heterogeneity: challenges and opportunities
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
