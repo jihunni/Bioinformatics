@@ -18,6 +18,16 @@
 # Molecular Biology
 - Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
 - 
+
+# Cancer evolution
+- Heterozygous mutations cause genetic instability in a yeast model of cancer evolution
+- A river model to map convergent cancer evolution and guide therapy in RCC
+- A renewed model of pancreatic cancer evolution based on genomic rearrangement patterns
+- Modeling colorectal cancer evolution
+- The clonal evolution of metastatic colorectal cancer
+- Genomic evolution and diverse models of systemic metastases in colorectal cancer
+- Integrated Multiregional Analysis Proposing a New Model of Colorectal Cancer Evolution 
+
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
 - Characterization of heterogeneous redox responses in hepatocellular carcinoma patients using network analysis   
