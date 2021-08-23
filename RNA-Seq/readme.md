@@ -45,7 +45,7 @@ $ chmod 755 fastqc
 $ ./fastqc
 $ sudo ln -s /path/to/FastQC/fastqc /usr/local/bin/fastqc
 ```
-- linux server supports graphic version
+- linux server supports graphic version  
 ![image](https://user-images.githubusercontent.com/48517782/129911884-3501a837-0bde-44fa-a43d-85ca247bbd15.png)
 ![image](https://user-images.githubusercontent.com/48517782/129912021-e18119ee-7a31-40e4-90f6-92537a25e55c.png)
 
@@ -57,15 +57,23 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 # STAR alignment
 ## STAR index
 ```
-nohup STAR --runThreadN 8 
---genomeDir DAS_Storage1/ec5307/jihun/ref_genome4_gencode/star_index/ 
---sjdbGTFfile DAS_Storage1/ec5307/jihun/ref_genome4_gencode/gencode.v29.chr_patch_hapl_scaff.annotation.gtf 
---runMode genomeGenerate 
---genomeFastaFiles /DAS_Storage1/jihun/ref_genome4_gencode /GRCh38.p12.genome.fa 
---sjdbOverhang 99 
---limitGenomeGenerateRAM 250000000000 
+nohup STAR --runMode genomeGenerate \
+--runThreadN 8 \
+--limitGenomeGenerateRAM 250000000000 \
+--genomeDir DAS_Storage1/ec5307/jihun/ref_genome4_gencode/star_index/ \
+--sjdbGTFfile DAS_Storage1/ec5307/jihun/ref_genome4_gencode/gencode.v29.chr_patch_hapl_scaff.annotation.gtf  \
+--genomeFastaFiles /DAS_Storage1/jihun/ref_genome4_gencode /GRCh38.p12.genome.fa \
+--sjdbOverhang 99 \
 2> stderr.log &
 ```
+> Options:
+> runThreadN : the number of thread. check `/proc/cpuinfo`
+> limitGenomeGenerateRAM : RAM usage. check `/proc/meminfo`
+> genomeDir : output file directory
+> sjdbGTFfile : reference GTF file (annotation)
+> genomeFastaFiles : reference fast file
+> sjdbOverhang : length - 1
+
 
 The result of STAR index:  
 ![image](https://user-images.githubusercontent.com/48517782/130388308-0bc7847c-a976-4482-ad1b-43bd5fc7b552.png)
