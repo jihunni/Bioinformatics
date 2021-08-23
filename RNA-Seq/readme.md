@@ -55,8 +55,22 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 ```
 
 # STAR alignment
+## STAR index
+```
+nohup STAR --runThreadN 8 
+--genomeDir DAS_Storage1/ec5307/jihun/ref_genome4_gencode/star_index/ 
+--sjdbGTFfile DAS_Storage1/ec5307/jihun/ref_genome4_gencode/gencode.v29.chr_patch_hapl_scaff.annotation.gtf 
+--runMode genomeGenerate 
+--genomeFastaFiles /DAS_Storage1/jihun/ref_genome4_gencode /GRCh38.p12.genome.fa 
+--sjdbOverhang 99 
+--limitGenomeGenerateRAM 250000000000 
+2> stderr.log &
+```
 
+The result of STAR index:  
+![image](https://user-images.githubusercontent.com/48517782/130388308-0bc7847c-a976-4482-ad1b-43bd5fc7b552.png)
 
+## STAR alignment
 ```
 $ /home/bioinfo20165164/program/STAR-2.7.8a/source/STAR --runThreadN 8 \
 	--quantMode TranscriptomeSAM GeneCounts \
@@ -74,6 +88,10 @@ $ /home/bioinfo20165164/program/STAR-2.7.8a/source/STAR --runThreadN 8 \
 >* --genomeFastaFiles: /path/to/FASTA_file  
 >* --sjdbGTFfile: /path/to/GTF_file  
 >* --sjdbOverhang: readlength -1  
+
+The output of STAR alignment:   
+![image](https://user-images.githubusercontent.com/48517782/130388366-bc5be085-dc5e-420f-9952-6407969117bd.png)
+
 
 ## samtools index
 - Indexing a genome sorted BAM file allows one to quickly extract alignments overlapping particular genomic regions. Moreover, indexing is required by genome viewers such as IGV so that the viewers can quickly display alignments in each genomic region to which you navigate.
