@@ -66,13 +66,13 @@ nohup STAR --runMode genomeGenerate \
 --sjdbOverhang 99 \
 2> stderr.log &
 ```
-> Options:
-> runThreadN : the number of thread. check `/proc/cpuinfo`
-> limitGenomeGenerateRAM : RAM usage. check `/proc/meminfo`
-> genomeDir : output file directory
-> sjdbGTFfile : reference GTF file (annotation)
-> genomeFastaFiles : reference fast file
-> sjdbOverhang : length - 1
+> Options:  
+> runThreadN : the number of thread. check `/proc/cpuinfo`  
+> limitGenomeGenerateRAM : RAM usage. check `/proc/meminfo`  
+> genomeDir : output file directory  
+> sjdbGTFfile : reference GTF file (annotation)  
+> genomeFastaFiles : reference fast file  
+> sjdbOverhang : length - 1  
 
 
 The result of STAR index:  
