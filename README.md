@@ -42,6 +42,10 @@
 - `protocol` MetaboTools: A Comprehensive Toolbox for Analysis of Genome-Scale Metabolic Models
 - In silico learning of tumor evolution through mutational time series | PNAX, 2019 | [paper](https://www.pnas.org/content/116/19/9501) | [code](https://github.com/noamaus/LSTM-Mutational-series)
 - A machine learning approach to predict metabolic pathway dynamics from time-series multiomics data
+##sequencing
+- whole genome sequencing vs exon sequencing
+  - **Whole Genome Sequencing** sequences the complete DNA of an organism. In the case of a human this corresponds to about three billion base pairs of DNA. Whole genome sequencing entails sequencing all coding (exons) and noncoding (intron) nuclear DNA as well as mitochondrial DNA. This allows researchers to generate large quantities of data, which can then be analyzed.
+  - The exome makes up only 1.5% of the whole human genome, however ALL protein coding genes are found in the exome. Since most genetic disorders are correlated with mutations in protein coding genes, most physicians and scientists who use sequencing technologies for diagnostic purposes start with an analysis of the exome. Exome sequencing and analysis typically takes less time than whole genome sequencing at less than half the cost. 
 ## single cell omics
 - Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
 - Clonal fitness inferred from time-series modelling of single-cell cancer genomes | Nature, 2021 | [paper](https://www.nature.com/articles/s41586-021-03648-3#data-availability) | [Data](https://ega-archive.org/studies/EGAS00001004448)
