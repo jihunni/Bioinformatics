@@ -32,6 +32,7 @@
 - `review` Clonal Heterogeneity and Tumor Evolution: Past, Present, and the Future | Cell, 2017
 - `reivew` Integrating genetic and non-genetic determinants of cancer evolution by single-cell multi-omics | Nature
 - Temporal dissection of tumorigenesis in primary cancers | Cancer Discovery, 2011 | [paper](https://cancerdiscovery.aacrjournals.org/content/candisc/1/2/137.full.pdf)
+- The evolutionary history of 2,658 cancers | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-019-1907-7)
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
