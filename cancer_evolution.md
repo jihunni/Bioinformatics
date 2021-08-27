@@ -1,11 +1,13 @@
 # Cancer evolution
-## terminology
+## terminology : genome instability
 - genome stability : 
   - microsatellite instability (MSI) : mutations/epigenetic silencing of mismatch repair gene -> DNA mismatch repair X -> somatic single nucleotide variants (SNVs), small indels
   - chromosomal instability (CIN) : aneuploid, accumulate somatic strctural variants (SVs ; genomic rearrangements) -> copy number variations (CNVs)
-- molecular time
+  - **Copy neutral loss of heterozygosity** describes a phenomenon whereby one of two homologous chromosomal regions is lost, but various mechanisms have ensured the presence of two identical copies of such region in the genome. As a result, the karyotype appears normal or ‘copy neutral.’
 - hypodiploid
 - hyperdiploid
+- molecular time
+## terminology : sequencing
 - Base call quality score (Q score) : Q score is a PHRED-scaled probability ranging from 0-20 inversely proportional to the probability that a single sequenced base is correct. For example, a T base call with Q of 20 is considered likely correct with a confidence P-value of 0.01. Any base call with Q<20 should be considered low quality, and any variant identified where a substantial proportion of reads supporting the variant are of low quality should be considered potentially false positive.
 - Read depth : Read depth (or coverage, conventionally a number followed by "×") is the number of independent reads with overlapping
 alignment at a locus of interest.
