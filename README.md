@@ -33,6 +33,7 @@
 - `reivew` Integrating genetic and non-genetic determinants of cancer evolution by single-cell multi-omics | Nature
 - Temporal dissection of tumorigenesis in primary cancers | Cancer Discovery, 2011 | [paper](https://cancerdiscovery.aacrjournals.org/content/candisc/1/2/137.full.pdf)
 - The Life History of 21 Breast Cancers | Cell, 2012
+- `method` Estimation of rearrangement phylogeny for cancer genomes | Genome Res. 2012
 - Pan-cancer analysis of whole genomes | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-020-1969-6#Fig5)
   - On average, cancer genomes contained 4~5 driver mutations when combining coding and non-coding genomic elements. However, in around 5% of cases no drivers were identified.
   - Chromothripsis, in which many clustered structural variants arise in a single catastrophic event, is frequently an early event in tumour evolution.
