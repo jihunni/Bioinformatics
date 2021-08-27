@@ -1,5 +1,8 @@
 # Cancer evolution
 ## terminology
+- genome stability : 
+  - microsatellite instability (MSI) : mutations/epigenetic silencing of mismatch repair gene -> DNA mismatch repair X -> somatic single nucleotide variants (SNVs), small indels
+  - chromosomal instability (CIN) : aneuploid, accumulate somatic strctural variants (SVs ; genomic rearrangements) -> copy number variations (CNVs)
 - molecular time
 - hypodiploid
 - hyperdiploid
