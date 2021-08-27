@@ -6,6 +6,10 @@
 - molecular time
 - hypodiploid
 - hyperdiploid
+- VAF : the percentage of sequence reads observed matching a specific DNA variant divided by the overall coverage at that locus. 
+- mutant allele frequency (MAF)
+- minor allel (B-allel) frequency (IBAF)
+- copy ratio plot
 ## paper
 - Heterozygous mutations cause genetic instability in a yeast model of cancer evolution
 - A river model to map convergent cancer evolution and guide therapy in RCC
@@ -26,3 +30,4 @@
   - Chromothripsis, in which many clustered structural variants arise in a single catastrophic event, is frequently an early event in tumour evolution.
 - The evolutionary history of 2,658 cancers | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-019-1907-7)
 - `review` Modeling colorectal cancer evolution
+- `review` Current practices and guidelines for clinical next-generation sequencing oncology testing | Cancer Biol Med 2016
