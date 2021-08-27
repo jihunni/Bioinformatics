@@ -19,31 +19,6 @@
 - Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
 - 
 
-# Cancer evolution
-## terminology
-- molecular time
-- hypodiploid
-- hyperdiploid
-## paper
-- Heterozygous mutations cause genetic instability in a yeast model of cancer evolution
-- A river model to map convergent cancer evolution and guide therapy in RCC
-- A renewed model of pancreatic cancer evolution based on genomic rearrangement patterns
-- Modeling colorectal cancer evolution
-- The clonal evolution of metastatic colorectal cancer
-- Genomic evolution and diverse models of systemic metastases in colorectal cancer
-- Integrated Multiregional Analysis Proposing a New Model of Colorectal Cancer Evolution 
-- `review` Clinical implications of intratumor heterogeneity: challenges and opportunities
-- `review` Clonal evolution in cancer | Nature, 2012
-- `review` Clonal Heterogeneity and Tumor Evolution: Past, Present, and the Future | Cell, 2017
-- `reivew` Integrating genetic and non-genetic determinants of cancer evolution by single-cell multi-omics | Nature
-- Temporal dissection of tumorigenesis in primary cancers | Cancer Discovery, 2011 | [paper](https://cancerdiscovery.aacrjournals.org/content/candisc/1/2/137.full.pdf)
-- The Life History of 21 Breast Cancers | Cell, 2012
-- `method` Estimation of rearrangement phylogeny for cancer genomes | Genome Res. 2012
-- Pan-cancer analysis of whole genomes | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-020-1969-6#Fig5)
-  - On average, cancer genomes contained 4~5 driver mutations when combining coding and non-coding genomic elements. However, in around 5% of cases no drivers were identified.
-  - Chromothripsis, in which many clustered structural variants arise in a single catastrophic event, is frequently an early event in tumour evolution.
-- The evolutionary history of 2,658 cancers | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-019-1907-7)
-
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
 - Characterization of heterogeneous redox responses in hepatocellular carcinoma patients using network analysis   
@@ -80,34 +55,6 @@
 
 
 
-# Structrual Bioinformatics (Computational structural biology)
-- [`review` advances in protein structure prediction and design | Nature, 2019](https://www.nature.com/articles/s41580-019-0163-x)  
-- [`perspective` Macromolecular modeling and design in Rosetta: recent methods and frameworks | Nature methods, 2020](https://www.nature.com/articles/s41592-020-0848-2) 
-## Experiment : X-ray, NMR, Cryo-EM, Mass spec
-
-## Physics : Energy potentials, Molecular dynamics
-### Molecular Dynamics
-- [`review` Coarse-Grained Protein Models and Their Applications](https://pubs.acs.org/doi/10.1021/acs.chemrev.6b00163)
-- [`review` Molecular Dynamics Simulation for All](https://www.cell.com/neuron/pdf/S0896-6273(18)30684-6.pdf)   
-- [`video` Introduction to Molecular Dynamics Simulations](https://www.youtube.com/watch?v=yaLPLRO1FLE) [Homepage(pdf)](https://www.westgrid.ca/events/introduction_classical_molecular_dynamics_simulations)   
-- [`program` LAMMPS Molecular Dynamics Simulator](https://www.lammps.org/index.html)   
-- [Rosetta3: An Object-Oriented Software Suite for the Simulation and Design of Macromolecules](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083816/#)
-- `program` PyRosetta: a script-based interface for implementing molecular modeling algorithms using Rosetta | [paper](https://academic.oup.com/bioinformatics/article/26/5/689/212442) | [program homepage](https://www.pyrosetta.org/)
-- [`review` Protein storytelling through physics | science, 2020](https://science.sciencemag.org/content/370/6520/eaaz3041)
-## Knowledge-based : Homology modeling, Fragments
-
-## Evolutionary constraint
-- [Protein 3D Structure Computed from Evolutionary Sequence Variation | 2011](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0028766)   
-- [`perspective` Protein structure prediction from sequence variation | Nature](https://www.nature.com/articles/nbt.2419)   
-  - key concept: evolutionary coupling, covariation
-
-## ML/DL
-- [Improved protein structure prediction using potentials from deep learning](https://www.nature.com/articles/s41586-019-1923-7?proof=t)   
-- [Accurate prediction of protein structures and interactions using a three-track neural network | Science, 2021](https://science.sciencemag.org/content/early/2021/07/19/science.abj8754)   
-- [Highly accurate protein structure prediction with AlphaFold | Nature, 2021](https://www.nature.com/articles/s41586-021-03819-2)
-- [`video` AlphaFold : 딥러닝 잠재력을 사용하여 단백질 구조 예측 개선](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&t=3021s)   
-- [`review` A review on the attention mechanism of deep learning | 2021](https://www.sciencedirect.com/science/article/pii/S092523122100477X)   
-- `review` [Deep learning techniques have significantly impacted protein structure prediction and protein design | Curr Opin Struct Biol. 2021 ](https://www.sciencedirect.com/science/article/pii/S0959440X21000142?via%3Dihub)
 
 # Genome scale modeling
 - Genome-scale model of metabolism and gene expression provides a multi-scale description of acid stress responses in Escherichia coli | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007525)
