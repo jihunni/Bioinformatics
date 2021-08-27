@@ -1,3 +1,10 @@
+# terminology for RNA-seq
+- RNA-Seq read length and coverage
+- **Coverage**
+	- Next-generation sequencing (NGS) coverage describes the average number of reads that align to, or "cover," known reference bases. The sequencing coverage level often determines whether variant discovery can be made with a certain degree of confidence at particular base positions.
+	- Sequencing coverage requirements vary by application, as noted below. At higher levels of coverage, each base is covered by a greater number of aligned sequence reads, so base calls can be made with a higher degree of confidence.
+- **read depth** : For RNA sequencing, read depth is typically used instead of coverage. Detecting low-expression genes can require an increase in read depth. The ENCODE project (updated here) has data standards for RNA-Seq and Small RNA sequencing that are an excellent resource for many projects.
+
 # sequence alignment overview
 - procedure   
   <img src="https://user-images.githubusercontent.com/48517782/129913198-5ac027d0-082b-4ab9-b2a8-2c570af08b3f.png" width="200px" height="300px" title="" alt=""></img><br/>
