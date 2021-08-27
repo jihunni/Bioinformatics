@@ -6,10 +6,35 @@
 - molecular time
 - hypodiploid
 - hyperdiploid
-- VAF : the percentage of sequence reads observed matching a specific DNA variant divided by the overall coverage at that locus. 
+- Base call quality score (Q score) : Q score is a PHRED-scaled probability ranging from 0-20 inversely proportional to the probability that a single sequenced base is correct. For example, a T base call with Q of 20 is considered likely correct with a confidence P-value of 0.01. Any base call with Q<20 should be considered low quality, and any variant identified where a substantial proportion of reads supporting the variant are of low quality should be considered potentially false positive.
+- Read depth : Read depth (or coverage, conventionally a number followed by "×") is the number of independent reads with overlapping
+alignment at a locus of interest.
+- Variant read number (variant reads): Variant reads is the number of independent sequence reads supporting the presence of a variant. Due to the high error rate of NGS at the per-base call level, calls supported by fewer than 5 variant reads are typically considered to be likely false positive calls.
+- variant allele frequency (VAF) : the percentage of sequence reads observed matching a specific DNA variant divided by the overall coverage at that locus. 
+  - NGS provides a near random samples
+  - heterozygous loci sholud be near 50%
+  - homozygous loci sholud be near 100%
+  - referene loci sholud be near 0%
+  - deviations from these three expected values sholud be considered suspicious as potential errors due to incorrect base calls or alignment.
+- Variant quality scores (QUAL) : transformed log-scaled (PHRED) values where, for example, a score of 90 supports the variant call with a P-value of 1×10 -9.
+- allele
+  - major allele: the most common allele for a given SNP
+  - minor allele: the less common allele for a SNP. The MAF is therefore the minor allele frequence. This measure can be used to get a rough idea of the variation of genotypes for a given SNP in a given population, in other words it tells you how common this SNP is.
+  - risk allele: in the context of a disease, this is the allele that confers a risk of developing the disease. Most of the time, risk allele = minor allele, as most people will not carry the risk allele. However, in some case, the risk allele can in fact be the major allele.
+  - effect allele
+  - reference allele
+  - wildtype allele
 - mutant allele frequency (MAF)
 - minor allel (B-allel) frequency (IBAF)
+- Tumor purity: the percentage of cancer cells in a solid tumor sample
 - copy ratio plot
+- 
+## tool
+- BWA
+- Picard, GATK
+- MuTect, VarScan2, MuSE : somatic SNV
+- VarScan2, GATK, Baylor : Indel
+- Sequenza : sample purity, ploidy
 ## paper
 - Heterozygous mutations cause genetic instability in a yeast model of cancer evolution
 - A river model to map convergent cancer evolution and guide therapy in RCC
@@ -30,4 +55,5 @@
   - Chromothripsis, in which many clustered structural variants arise in a single catastrophic event, is frequently an early event in tumour evolution.
 - The evolutionary history of 2,658 cancers | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-019-1907-7)
 - `review` Modeling colorectal cancer evolution
-- `review` Current practices and guidelines for clinical next-generation sequencing oncology testing | Cancer Biol Med 2016
+- `review` Current practices and guidelines for clinical next-generation sequencing oncology testing | Cancer Biol Med 2016 | [paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4850126/pdf/cbm-13-1-3.pdf)
+  - basic terminology for RNA-seq and mutation  
