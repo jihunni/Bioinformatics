@@ -20,6 +20,11 @@
 - 
 
 # Cancer evolution
+## terminology
+- molecular time
+- hypodiploid
+- hyperdiploid
+## paper
 - Heterozygous mutations cause genetic instability in a yeast model of cancer evolution
 - A river model to map convergent cancer evolution and guide therapy in RCC
 - A renewed model of pancreatic cancer evolution based on genomic rearrangement patterns
