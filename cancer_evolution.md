@@ -25,3 +25,4 @@
   - On average, cancer genomes contained 4~5 driver mutations when combining coding and non-coding genomic elements. However, in around 5% of cases no drivers were identified.
   - Chromothripsis, in which many clustered structural variants arise in a single catastrophic event, is frequently an early event in tumour evolution.
 - The evolutionary history of 2,658 cancers | Nature, 2020 | [paper](https://www.nature.com/articles/s41586-019-1907-7)
+- `review` Modeling colorectal cancer evolution
