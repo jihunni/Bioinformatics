@@ -4,6 +4,9 @@
   - microsatellite instability (MSI) : mutations/epigenetic silencing of mismatch repair gene -> DNA mismatch repair X -> somatic single nucleotide variants (SNVs), small indels
   - chromosomal instability (CIN) : aneuploid, accumulate somatic strctural variants (SVs ; genomic rearrangements) -> copy number variations (CNVs)
   - **Copy neutral loss of heterozygosity** describes a phenomenon whereby one of two homologous chromosomal regions is lost, but various mechanisms have ensured the presence of two identical copies of such region in the genome. As a result, the karyotype appears normal or ‘copy neutral.’
+- mutation:
+  - synonymous mutation : Synonymous mutations are point mutations that only changes one base pair in the RNA copy of the DNA. They have no real role in the evolution of species since the gene or protein is not changed in any way. Synonymous mutations are actually fairly common, but since they have no effect, then they are not noticed.
+  - nonsynonymous mutation : Synonymous mutations are point mutations that changes both one base pair in the RNA copy of the DNA and protein sequence.
 - hypodiploid
 - hyperdiploid
 - molecular time
