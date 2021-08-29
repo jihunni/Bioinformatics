@@ -1,6 +1,6 @@
 # Cancer evolution
 ## medical terminology
-- Prevalence is the proportion of a population who have a specific characteristic in a given time period. 
+- Prevalence is the proportion of a population who have a specific characteristic in a given time period. (e.g. the prevalence of somatic mutations in each sample)
 - 
 ## terminology : genome instability
 - genome stability : 
