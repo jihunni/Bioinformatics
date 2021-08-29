@@ -51,7 +51,7 @@
 - cBioPortal
 - ENCODE
 - COSMIC [homepage](https://cancer.sanger.ac.uk/cosmic)
-- 
+- Drug Repurposing Hub | BROAD Institute | [homepage](https://clue.io/repurposing)
 
 
 
