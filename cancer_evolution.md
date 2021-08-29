@@ -2,7 +2,7 @@
 ## medical terminology
 - Prevalence is the proportion of a population who have a specific characteristic in a given time period. (e.g. the prevalence of somatic mutations in each sample)
 - 
-## terminology : genome instability
+## terminology : genome instability and cancer evolution
 - genome stability : 
   - microsatellite instability (MSI) : mutations/epigenetic silencing of mismatch repair gene -> DNA mismatch repair X -> somatic single nucleotide variants (SNVs), small indels
   - chromosomal instability (CIN) : aneuploid, accumulate somatic strctural variants (SVs ; genomic rearrangements) -> copy number variations (CNVs)
@@ -12,6 +12,7 @@
   - nonsynonymous mutation : Synonymous mutations are point mutations that changes both one base pair in the RNA copy of the DNA and protein sequence.
 - hypodiploid
 - hyperdiploid
+- clonal
 - molecular time
 ## terminology : sequencing
 - Base call quality score (Q score) : Q score is a PHRED-scaled probability ranging from 0-20 inversely proportional to the probability that a single sequenced base is correct. For example, a T base call with Q of 20 is considered likely correct with a confidence P-value of 0.01. Any base call with Q<20 should be considered low quality, and any variant identified where a substantial proportion of reads supporting the variant are of low quality should be considered potentially false positive.
@@ -37,6 +38,7 @@ alignment at a locus of interest.
 - Tumor purity: the percentage of cancer cells in a solid tumor sample
 - copy ratio plot
 - 
+
 ## tool
 - BWA
 - Picard, GATK
