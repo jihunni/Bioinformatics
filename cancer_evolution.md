@@ -1,4 +1,7 @@
 # Cancer evolution
+## medical terminology
+- Prevalence is the proportion of a population who have a specific characteristic in a given time period. 
+- 
 ## terminology : genome instability
 - genome stability : 
   - microsatellite instability (MSI) : mutations/epigenetic silencing of mismatch repair gene -> DNA mismatch repair X -> somatic single nucleotide variants (SNVs), small indels
