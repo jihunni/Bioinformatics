@@ -9,6 +9,10 @@
 - downstream scientific analysis
 
 # concepts for genomics
+## DNA lesion
+- mutation : a change in the sequence of base pair.
+- DNA lesion : an abnormal chemical structure in DNA. a section of a DNA molecule containing a primary damaged site i.e. a base alteration, a base deletion, a sugar alteration or a strand break. Replication before repair, or inefficient repair, can result in the fixation of a primary lesion as a permanent mutation.
+
 ## somatic variants vs germline variants
 ![image](https://user-images.githubusercontent.com/48517782/131243482-192bc141-fd2e-41c6-b782-265870b9fde0.png)
 - germline variants: 
