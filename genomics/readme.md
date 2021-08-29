@@ -27,3 +27,8 @@
 ## reference
 - https://gatk.broadinstitute.org/hc/en-us/articles/360035890491?id=11127
 - https://www.biostars.org/p/305866/
+
+# PCAWG 
+
+![image](https://user-images.githubusercontent.com/48517782/131244392-91fe5eca-0afc-4028-9f16-5bf322c8ef40.png)  
+Figure. Scientific output using PCAWG data, in bite-size chunks
