@@ -66,3 +66,7 @@
 - Identification of Genome-Scale Metabolic Network Models Using Experimentally Measured Flux Profiles | 2006
 - Genome-Scale Metabolic Modeling of Glioblastoma Reveals Promising Targets for Drug Development | 2020
 - `review` Genome scale metabolic modeling of cancer
+
+# medical bioinformatics
+- Phenotypic signatures in clinical data enable systematic identification of patients for genetic testing
+- A longitudinal big data apporach for precision health | 2019 Nature medicine
