@@ -30,5 +30,6 @@ to measure **nucleosome occupancy** in the human genome
   - footprint (a deep notch of ATAC-seq) : the presence of DNA-binding protein at each site
 - `news` The genome shows its sensitive side | Nature Methods, 2014 | 
 - `method` An improved ATACseq protocol reduces background and enables interrogation of frozen tissues | 2017, Nature Method | [link](https://www.nature.com/articles/nmeth.4396.pdf)
+- `review` Identifying and mitigating bias in next-generation sequencing methods for chromatin biology | 2014 Nature Reviews Genetics | [paper](https://www.nature.com/articles/nrg3788)
 - `review` From reads to insight: a hitchhiker’s guide to ATAC-seq data analysis | 2020, Genome Biology | [paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-1929-3)
 - file format | [link](http://genome.ucsc.edu/FAQ/FAQformat.html#format1)
