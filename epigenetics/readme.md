@@ -13,6 +13,8 @@ to measure **nucleosome occupancy** in the human genome
 - Refined DNase-seq protocol and data analysis reveals intrinsic bias in transcription factor footprint identification | Nature Methods, 2013| [paper](https://www.nature.com/articles/nmeth.2762)
 
 # ATAC-seq
+![image](https://user-images.githubusercontent.com/48517782/133800455-17b98397-d92d-4f9e-9f7b-d890c6d23c59.png)  
+
 - `method` Rapid, low-input, low-bias construction of shotgun fragment libraries by high-density in vitro transposition | Genome Biology, 2010 | [paper](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-12-r119)
   - Tn5 transpose
   - tagmentation
