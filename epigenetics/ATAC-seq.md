@@ -1,13 +1,14 @@
 # CAGE (cap analysis of gene expression)
 to identify and monitor the activity (transcription initiation frequency) of **transcription start sites (TSS)** at single base-pair resultion acorss the genome
 
-# MNase-seq (micrococal nuclease digestion followed by sequencing_
+# MNase-seq (micrococal nuclease digestion followed by sequencing)
 to measure **nucleosome occupancy** in the human genome  
 ![image](https://user-images.githubusercontent.com/48517782/133800009-dcabf1ed-e5e2-46b5-9891-c6f41f7bdae7.png)
 
 # DNase
 - Global mapping of protein-DNA interactions in vivo by digital genomic footprinting | Nature Methods, 2009 | [paper](https://www.nature.com/articles/nmeth.1313)
-- Coupling transcription factor occupancy to nucleosome architecture with DNase-FLAS
+- An expansive human regulatory lexicon encoded in transcription factor footprints | Nature 2012 | [paper](https://www.nature.com/articles/nature11212) 
+-  Coupling transcription factor occupancy to nucleosome architecture with DNase-FLAS
   - refinement of Dna
 - Refined DNase-seq protocol and data analysis reveals intrinsic bias in transcription factor footprint identification | Nature Methods, 2013| [paper](https://www.nature.com/articles/nmeth.2762)
 
