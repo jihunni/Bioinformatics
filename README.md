@@ -28,7 +28,7 @@
   - Human specific DMRs are enriched in genic regions and enhancers
   - Cell-type differentially methylated regions are enriched in GWAS variants for neuropsychiatric disorders
 
-# Aging
+# Aging (장영목 교수 (Georgia tech))
 - `review` The Hallmarks of Agin | Cell, 2013
 - Sarcopenia : 
 - epigenetic regulation == memory in cell ??
@@ -41,6 +41,18 @@
   - human parabiosis-on-a-chip
     - `review` Organoids-on-a-chip | Science, 2019
 
+# Drug discovery (윤태영 대표, Oscotec)
+- reductionism in science to technology
+  - observations --> (deconstruct) principles --> (reconstruct) applications
+  - plants --> chemistry (extract chemicals) --> drug
+- post-modern drug discovery
+  - gene : gene therapy (antisense, RNAi, mRNA, CRISPR, etc)
+  - protein : biologics (proteins, antibodies, etc), small molecules
+  - cell/gene therapies : stem cells, CART-T, mRNA, small molecules, etc
+  - Tissue/organ : regenerative medicine, tissue engineering, etc
+- Drug Discovery is Target validation
+  - hypothesis : The disease is caused by gene and its target .
+  - drug :  hit the drug target
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
