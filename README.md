@@ -19,6 +19,16 @@
 - Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
 - 
 
+# Evolutionary Biology
+- Sequencing the chimpanzee genome: insights into human evolution and disease | Nature Review Genetics
+- Comparative Methylome Analyses Identify Epigenetic Regulatory Loci of Human Brain Evolution 
+- Evolution of DNA methylation in the human brain | Nature Communications, 2021
+  - cell-type DNA methylation difference can extend to whole gene
+  - species- and cell-type specific DNA methylation changes
+  - Human specific DMRs are enriched in genic regions and enhancers
+  - Cell-type differentially methylated regions are enriched in GWAS variants for neuropsychiatric disorders
+
+
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
 - Characterization of heterogeneous redox responses in hepatocellular carcinoma patients using network analysis   
