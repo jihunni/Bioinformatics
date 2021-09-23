@@ -28,6 +28,19 @@
   - Human specific DMRs are enriched in genic regions and enhancers
   - Cell-type differentially methylated regions are enriched in GWAS variants for neuropsychiatric disorders
 
+# Aging
+- `review` The Hallmarks of Agin | Cell, 2013
+- Sarcopenia : 
+- epigenetic regulation == memory in cell ??
+- aging in MT
+  - oxidative stress (mitochondrial) theyory of aging
+  - Artificial Mitochondria Transfer: Current Challenges, Advances, and Future Applications | 2017
+- Rejuvenation of aged progenitor cells by exposure to a young systemic environment | Nature
+  - Parabiosis
+  - youthful factors in bolld
+  - human parabiosis-on-a-chip
+    - `review` Organoids-on-a-chip | Science, 2019
+
 
 # OMICS Bioinformatics
 - Model-based assessment of mammalian cell Metabolic functionalities using omics data   
