@@ -46,6 +46,20 @@ done
 ```
 
 # fastQC : quality check
+- phred 33 (new) vs phred 64 (new)
+  ```
+  # phred 33 encoded
+  @Read1
+  ATCTGATCATA
+  +
+  !45AK$IBCED
+  
+  # phred 64 encoded
+  @Read1
+  ATCTGATCATA
+  +
+  @AOPQSTUag
+  ```
 - install fastqc [reference](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/INSTALL.txt)
 ```
 $ chmod 755 fastqc
