@@ -3,3 +3,7 @@
 - international union of basic and clinical pharmacology
   - IUPHAR/BPS Guide to Pharmacology
 - cancer therapeutics response portal | broad institute | [homepage](http://portals.broadinstitute.org/ctrp/?page=#ctd2BodyHome), [paper](https://pubmed.ncbi.nlm.nih.gov/26482930/)
+
+# paper
+- A first-generation pediatric cancer dependency map
+- `perspective` An expanded universe of cancer targets
