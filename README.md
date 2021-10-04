@@ -3,6 +3,7 @@
 - A time-resolved proteomic and prognostic map of COVID-19 | Cell Systems, 2021 | [paper](https://www.cell.com/cell-systems/fulltext/S2405-4712(21)00160-5)
 - 
 # RNA biolgoy
+- [review] RNA-based recognition and targeting: sowing the seeds of specificity | Nature reviews
 - [review] A tale of non- canonical tails: gene regulation by post-transcriptional RNA tailing
 
 # General Cancer Biology
