@@ -29,3 +29,8 @@
 
 # David Baker
 - De novo design of picomolar SARS-CoV-2 miniprotein inhibitors
+- De novo design of modular and tunable protein biosensors
+- Designed protein logic to target cells with precise combinations of surface antigens
+- Designed proteins assemble antibodies into modular nanocages
+- Computational design of transmembrane pores
+- De novo design of transmembrane β barrels
