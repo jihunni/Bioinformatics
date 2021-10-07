@@ -28,9 +28,11 @@
 - `review` [Deep learning techniques have significantly impacted protein structure prediction and protein design | Curr Opin Struct Biol. 2021 ](https://www.sciencedirect.com/science/article/pii/S0959440X21000142?via%3Dihub)
 
 # David Baker
+- `review` The coming of age of  de  novo  protein  design | Nature, 2016
 - De novo design of picomolar SARS-CoV-2 miniprotein inhibitors
 - De novo design of modular and tunable protein biosensors
 - Designed protein logic to target cells with precise combinations of surface antigens
 - Designed proteins assemble antibodies into modular nanocages
 - Computational design of transmembrane pores
 - De novo design of transmembrane β barrels
+- De novo protein design by deep network hallucination
