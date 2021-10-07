@@ -26,3 +26,6 @@
 - [`video` AlphaFold : 딥러닝 잠재력을 사용하여 단백질 구조 예측 개선](https://www.youtube.com/watch?v=uQ1uVbrIv-Q&t=3021s)   
 - [`review` A review on the attention mechanism of deep learning | 2021](https://www.sciencedirect.com/science/article/pii/S092523122100477X)   
 - `review` [Deep learning techniques have significantly impacted protein structure prediction and protein design | Curr Opin Struct Biol. 2021 ](https://www.sciencedirect.com/science/article/pii/S0959440X21000142?via%3Dihub)
+
+# David Baker
+- De novo design of picomolar SARS-CoV-2 miniprotein inhibitors
