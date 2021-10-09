@@ -6,6 +6,8 @@
 # Genome scale modeling
 - Genome-scale model of metabolism and gene expression provides a multi-scale description of acid stress responses in Escherichia coli | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007525)
 - `review` Reconstructing organisms in silico: genome-scale models and their emerging applications | 2020 | [article](https://www.nature.com/articles/s41579-020-00440-4#Abs1) 
+- `review` Constraining the metabolic genotype–phenotype relationship using a phylogeny of in silico methods. Nature Reviews Microbiology, 10(4), 291–305. doi:10.1038/nrmicro2737 
+
 - `review` Machine and deep learning meet genome-scale metabolic modeling | 2019 | [article](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007084)
 - Machine learning applied to enzyme turnover numbers reveals protein structural correlates and improves metabolic models | 2018 | [article](https://www.nature.com/articles/s41467-018-07652-6)   
 - Kinetic profiling of metabolic specialists demonstrates stability and consistency of in vivo enzyme turnover numbers | PNAS, 2020 | [paper](https://www.pnas.org/content/pnas/117/37/23182.full.pdf?__cf_chl_jschl_tk__=pmd_62a42b6683aa59e3ba029d62943066c076542a4b-1628229665-0-gqNtZGzNAfijcnBszQkO)   
