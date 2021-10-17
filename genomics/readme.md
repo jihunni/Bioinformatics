@@ -1,3 +1,7 @@
+# reference genome
+- Ensembl chromosome other than 1-22, X, and Y | [Biostar](https://www.biostars.org/p/197567/)  
+  The KI* and GL* scaffolds are unplaced scaffolds, which often don't have a know chromosome association. In short, these are assembled stretches believed to belong to the human genome but where we generally don't know where to put them. If you look at the [UCSC names](https://github.com/dpryan79/ChromosomeMappings/blob/master/GRCh38_ensembl2UCSC.txt) for these, then you can more easily tell if they have an associated chromosome or not.
+
 # flow in genome analysis
 ![image](https://user-images.githubusercontent.com/48517782/131243597-52de4494-f280-471d-8a0b-ac72d2eed6c9.png)
 - data collection : while genome sequencing data, clinical and histological data
