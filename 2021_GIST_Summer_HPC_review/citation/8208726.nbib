@@ -1,0 +1,62 @@
+PMID- 8208726
+OWN - NLM
+STAT- MEDLINE
+DCOM- 19940708
+LR  - 20071114
+IS  - 0887-3585 (Print)
+IS  - 0887-3585 (Linking)
+VI  - 18
+IP  - 4
+DP  - 1994 Apr
+TI  - Monte Carlo simulations of protein folding. I. Lattice model and interaction scheme.
+PG  - 338-52
+AB  - A new hierarchical method for the simulation of the protein folding process and the 
+      de novo prediction of protein three-dimensional structure is proposed. The reduced 
+      representation of the protein alpha-carbon backbone employs lattice discretizations 
+      of increasing geometrical resolution and a single ball representation of side chain 
+      rotamers. In particular, coarser and finer lattice backbone descriptions are used. 
+      The coarser (finer) lattice represents C alpha traces of native proteins with an 
+      accuracy of 1.0 (0.7) A rms. Folding is simulated by means of very fast Monte Carlo 
+      lattice dynamics. The potential of mean force, predominantly of statistical origin, 
+      contains several novel terms that facilitate the cooperative assembly of secondary 
+      structure elements and the cooperative packing of the side chains. Particular 
+      contributions to the interaction scheme are discussed in detail. In the accompanying 
+      paper (Kolinski, A., Skolnick, J. Monte Carlo simulation of protein folding. II. 
+      Application to protein A, ROP, and crambin. Proteins 18:353-366, 1994), the method 
+      is applied to three small globular proteins.
+FAU - Kolinski, A
+AU  - Kolinski A
+AD  - Department of Molecular Biology, Scripps Research Institute, La Jolla, California 
+      92037.
+FAU - Skolnick, J
+AU  - Skolnick J
+LA  - eng
+GR  - GM-37408/GM/NIGMS NIH HHS/United States
+PT  - Journal Article
+PT  - Research Support, U.S. Gov't, P.H.S.
+PL  - United States
+TA  - Proteins
+JT  - Proteins
+JID - 8700181
+RN  - 0 (Amino Acids)
+SB  - IM
+MH  - Amino Acid Sequence
+MH  - Amino Acids/chemistry
+MH  - *Computer Simulation
+MH  - Hydrogen Bonding
+MH  - Models, Chemical
+MH  - Models, Molecular
+MH  - Models, Theoretical
+MH  - Molecular Sequence Data
+MH  - *Monte Carlo Method
+MH  - *Protein Folding
+MH  - *Protein Structure, Tertiary
+EDAT- 1994/04/01 00:00
+MHDA- 1994/04/01 00:01
+CRDT- 1994/04/01 00:00
+PHST- 1994/04/01 00:00 [pubmed]
+PHST- 1994/04/01 00:01 [medline]
+PHST- 1994/04/01 00:00 [entrez]
+AID - 10.1002/prot.340180405 [doi]
+PST - ppublish
+SO  - Proteins. 1994 Apr;18(4):338-52. doi: 10.1002/prot.340180405.

@@ -1,0 +1,17 @@
+TY  - JOUR
+AU  - Kuhlman, Brian
+AU  - Bradley, Philip
+PY  - 2019
+DA  - 2019/11/01
+TI  - Advances in protein structure prediction and design
+JO  - Nature Reviews Molecular Cell Biology
+SP  - 681
+EP  - 697
+VL  - 20
+IS  - 11
+AB  - The prediction of protein three-dimensional structure from amino acid sequence has been a grand challenge problem in computational biophysics for decades, owing to its intrinsic scientific interest and also to the many potential applications for robust protein structure prediction algorithms, from genome interpretation to protein function prediction. More recently, the inverse problem — designing an amino acid sequence that will fold into a specified three-dimensional structure — has attracted growing attention as a potential route to the rational engineering of proteins with functions useful in biotechnology and medicine. Methods for the prediction and design of protein structures have advanced dramatically in the past decade. Increases in computing power and the rapid growth in protein sequence and structure databases have fuelled the development of new data-intensive and computationally demanding approaches for structure prediction. New algorithms for designing protein folds and protein–protein interfaces have been used to engineer novel high-order assemblies and to design from scratch fluorescent proteins with novel or enhanced properties, as well as signalling proteins with therapeutic potential. In this Review, we describe current approaches for protein structure prediction and design and highlight a selection of the successful applications they have enabled.
+SN  - 1471-0080
+UR  - https://doi.org/10.1038/s41580-019-0163-x
+DO  - 10.1038/s41580-019-0163-x
+ID  - Kuhlman2019
+ER  - 
