@@ -255,7 +255,7 @@ write.table(result, paste0(getwd(), "/conversion.txt"), quote=FALSE, append=FALS
 write.table(dataframe, file = "male_tumor_only.txt", sep = "\t", col.names = TRUE, row.names = TRUE, quote=FALSE, append=FALSE)
 
 #sort
-data.frame[sort(vector / df$colnames),] #sort row
+data.frame[order(vector / df$colnames),] #sort row
 
 #correlation
 matrix = cor(correlation_prepared_data.frame) 
