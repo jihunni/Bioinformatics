@@ -1,3 +1,20 @@
+# Tumor microenvironment
+## paper
+- Spatially confined sub-tumor mictroenvironments in pancreatic cancer
+	- pancreatic ductal adenocarcinoma (PDAC) regional heterogeneity stems from sub-tumor microenvironment (subTMEs)
+		- deserted region : thin, spindle-shaped fibroblasts, loose matured fibers, and often keloid or myxoid features
+		- reactive region : plump fibroblasts with enlarged nuclei, few acellular components, often rich in inflammatory infiltration
+		- intermediate regon
+		- sub-tumor microenvironment : co-occurence of deserted region and reactive regions within the same tumor in a spatially confined maner.
+	- subTMEs exhibit distinct immune phenotypes and CAF differentiation states
+		- deserted region : grow faster
+		- reactive region : more motile
+	- SubTMEs execute distinct tumor-promoting (reactive) and chemoprotective (deserted) functions
+		- deserted region : chemoprotective (chemoresistance)
+		- reactive region : proliferative, basal-like, poorly differentiated tumor cell phenotype
+	- Intratumoral subTME co-occurence links stromal heterogeneity to patient outcome.
+	- method : laser catpure microdissection (LCM), RNA sequencing, shotgu proteomics, single-cell RNA-seq, patient-derived organoids
+- 
 # Cancer evolution
 ## medical terminology
 - Prevalence is the proportion of a population who have a specific characteristic in a given time period. (e.g. the prevalence of somatic mutations in each sample)
