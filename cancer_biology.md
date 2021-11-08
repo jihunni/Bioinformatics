@@ -1,6 +1,6 @@
 # Tumor microenvironment
 ## paper
-- Spatially confined sub-tumor mictroenvironments in pancreatic cancer
+- Spatially confined sub-tumor mictroenvironments in pancreatic cancer | Cell, 2021
 	- pancreatic ductal adenocarcinoma (PDAC) regional heterogeneity stems from sub-tumor microenvironment (subTMEs)
 		- deserted region : thin, spindle-shaped fibroblasts, loose matured fibers, and often keloid or myxoid features
 		- reactive region : plump fibroblasts with enlarged nuclei, few acellular components, often rich in inflammatory infiltration
