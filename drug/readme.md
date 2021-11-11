@@ -8,6 +8,7 @@
 - SuperTarget
 - ChEMBL | [homepage](https://www.ebi.ac.uk/chembl/)
 - DrugCentral
+- canSAR
 
 
 # paper
