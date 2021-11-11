@@ -6,6 +6,10 @@
 - Therapeutic Targets Database
 - DrugBank
 - SuperTarget
+- ChEMBL | [homepage](https://www.ebi.ac.uk/chembl/)
+- DrugCentral
+
+
 # paper
 - A first-generation pediatric cancer dependency map
 - `perspective` An expanded universe of cancer targets
