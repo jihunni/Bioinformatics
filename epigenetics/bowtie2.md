@@ -18,5 +18,5 @@ Ref: https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ruleout
 
 # alignment
 	```
-
+	bowtie2 -k 1 -D 20 -R 3 -N 1 -L 20 -i S,1,0.50 -X 2000 --rg-id -p 10 -x Homo_sapiens.GRCh38_bowtie2  -1 NCLB246GTQ-trimmed-pair1.fastq -2 NCLB246GTQ-trimmed-pair2.fastq -S output.sam
 	```
