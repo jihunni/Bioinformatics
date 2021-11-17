@@ -38,8 +38,20 @@ ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_nor
     geom_point(size=2, shape=16) +
     scale_color_manual(values=c('green','red')) #color selection per group
 #boxplot
+plot_df = data.frame(score=x, target=y)
+  button10 =  dplyr::top_n(plot_df, -dim(plot_df)[1]*0.1,target) #lowest
+  button10['group'] = 'button'
+  top10 = dplyr::top_n(plot_df, dim(plot_df)[1]*0.1,target) #highest
+  top10['group'] = 'top'
+  plot_df = rbind(button10, top10)
+  rm(button10, top10)
+
 ggplot(boxplot_data.frame, aes(x = sex, y=value)) +
-    geom_boxplot(width=0.8, outlier.size = NULL, outlier.shape=16, outlier.colour='black') 
+    geom_boxplot(width=0.8, outlier.size = NULL, outlier.shape=16, outlier.colour='black')  +
+    geom_signif(comparisons = list(c("button","top")),
+              map_signif_level = TRUE, step_increase = 0.1)
+	 ## x : categorical variable ; 
+	 ## y : numerical variable
 
 #violin plot with box plot
 ggplot(data.frame, aes(x = colname_x_in_data.frame, y=colname_y, fill=colname)) +
