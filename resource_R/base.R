@@ -171,6 +171,14 @@ function_name = function(input_char){
 }
 result = sapply(HMR$EQUATION, function_name) #HMR$EQUATION : vector
 
+# select top_n or button_n
+df = data.frame(score=x, target=y)
+button10 =  dplyr::top_n(df, -dim(df)[1]*0.1, target) #lowest
+button10['group'] = 'button'
+top10 = dplyr::top_n(df, dim(df)[1]*0.1,target) #highest
+top10['group'] = 'top'
+plot_df = rbind(button10, top10)
+                      
 #find out wheter the specific substring exists in data.framee (version 2)
 Boolian list = str_detect(data,frame, 'string need to be detected') #find the index (boolian)
 
