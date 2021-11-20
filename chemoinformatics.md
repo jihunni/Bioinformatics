@@ -154,6 +154,8 @@ $$$$
       - ECFP4 : 2 iteration (radius = 2, diameter =4)
       - ECFP6 : 3 iteration (radius = 3, diameter =6)
     4. (optional) Folding to bits to speed up 
+      ![image](https://user-images.githubusercontent.com/48517782/142730179-1ec53041-f73d-483a-a685-9eaaeaec627e.png)
+
 - similarity measure with chemical fingerprint
   - Tanimoto Coefficient (Jaccard Index)  
     a similarity measure from two binary vector that ranges from 0 to 1  
