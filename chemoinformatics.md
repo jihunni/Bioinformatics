@@ -130,7 +130,37 @@ M  CHG  1   3   1
 M  END
 $$$$
 ```
-# database
+- chemical FingerPrints
+  - MACCS Key
+    frequently used structural pattern  
+    e.g. MACCS166  
+  - Morgan Algorithm (suggsted by Morgan on 1969)
+    ![image](https://user-images.githubusercontent.com/48517782/142729272-4c6b42a7-6977-400e-a913-0adb305ed861.png)  
+    1. assign the number of connected atoms as connectivity
+    2. sum the connectivity of the connected atoms and assign it as connectivity
+    3. Repeat (2) until the connectivity values are not changed.
+  - ECFP (most frequently used)
+    ![image](https://user-images.githubusercontent.com/48517782/142729858-543a5036-638d-474e-84d8-7dca0cb25cb3.png)  
+    1. assign initial numbers to atoms based on the Daylight atomic invariants-derived rule. Initial numbers are put into a hash function. (A hash function is any function that can be used to map data of arbitrary size to fixed-size values. The values returned by a hash function are called hash values, hash codes, digests, or simply hashes.)
+      - Number of heavy atom neighbors
+      - Atomic number
+      - Atomic mass
+      - Atomic charge
+      - Number of attached hydrogens
+      - Whether it is contained in a ring or not
+    2. save information of each atom as a list. Get hasn value by using hash function with a list.
+    3. iterate 2~3 times
+      - ECFP2 : 1 iteration (radius = 1, diameter =2) 
+      - ECFP4 : 2 iteration (radius = 2, diameter =4)
+      - ECFP6 : 3 iteration (radius = 3, diameter =6)
+    4. (optional) Folding to bits to speed up 
+- similarity measure with chemical fingerprint
+  - Tanimoto Coefficient (Jaccard Index)  
+    a similarity measure from two binary vector that ranges from 0 to 1  
+    `rdkit.DataStructs.FingerprintSimilarity`
+  - Dice similarity  
+    `DataStructs.DiceSimilarity`
+  # database
 - ZINC database
 - PubChem | [link](https://pubchem.ncbi.nlm.nih.gov/) 
   - largest database 
