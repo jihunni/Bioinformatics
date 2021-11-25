@@ -7,7 +7,6 @@
 - [review] A tale of non- canonical tails: gene regulation by post-transcriptional RNA tailing
 
 # General Cancer Biology
-- [2018 간세포종 진료 가이드라인 (대한간암학회, 국립암센터)](https://m.gastrokorea.org/bbs/index.php?code=guide&mode=view&number=1410&)  
 - [Review] The Effects of Conjugated Linoleic Acids on Cancer
 - Recent advances in the molecular mechanism of sex disparity in hepatocellular carcinoma (Review)
 - Glutathione Depletion Induced by c-Myc Downregulation Triggers Apoptosis on Treatment with Alkylating Agents1
@@ -15,6 +14,17 @@
 - Elevated expression and potential roles of human Sp5, a member of Sp transcription factor family, in human cancers
 - A Systems Biology Approach to Investigating the Interaction between Serotonin Synthesis by Tryptophan Hydroxylase and the Metabolic Homeostasis
 - Cancer Evolution | Nature collection | 2017 | [link](https://www.nature.com/collections/yhyydzgkfk)   
+## liver cancer
+- [2018 간세포종 진료 가이드라인 (대한간암학회, 국립암센터)](https://m.gastrokorea.org/bbs/index.php?code=guide&mode=view&number=1410&)  
+## prostate cancer
+normal prostate epithelium : basal cell, luminal cell, neuroendocrine cell 
+Cell types can determine cancer type  
+- Hormone sensitive
+  - hormone therapy
+- castration-resistant prostate cancer
+  different cancer subtypes have distinct histological profiles:
+  - prostate adenocarcinoma
+  - small cell prostate caner  
 
 # Molecular Biology
 - Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
@@ -22,6 +32,7 @@
 
 # Cell Metabolism
 - `review` Glutamine reliance in cell metabolism | Experimental & Molecular Medicine volume 52, pages1496–1516 (2020)
+- `review` Fructose and Mannose in Inborn Errors of Metabolism and Cancer
 -  `paper` Metabolic Heterogeneity in Human Lung Tumors | Cell
 -  Small Molecule Inhibition of CPS1 Activity through an Allosteric Pocke 
   - an application of S1P, lung cancer cell cancer target
