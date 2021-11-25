@@ -20,6 +20,12 @@
 - Deep computational analysis details dysregulation of eukaryotic translation initiation complex eIF4F in human cancers | Cell Systems, 2021 | [paper](https://www.sciencedirect.com/science/article/abs/pii/S2405471221002520?via%3Dihub)
 - 
 
+# Cell Metabolism
+- `review` Glutamine reliance in cell metabolism | Experimental & Molecular Medicine volume 52, pages1496–1516 (2020)
+-  `paper` Metabolic Heterogeneity in Human Lung Tumors | Cell
+-  Small Molecule Inhibition of CPS1 Activity through an Allosteric Pocke 
+  - an application of S1P, lung cancer cell cancer target
+- Analyzing Tumor Metabolism In Vivo
 # Evolutionary Biology
 - Sequencing the chimpanzee genome: insights into human evolution and disease | Nature Review Genetics
 - Comparative Methylome Analyses Identify Epigenetic Regulatory Loci of Human Brain Evolution 
