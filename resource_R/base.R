@@ -262,6 +262,20 @@ write.table(result, paste0(getwd(), "/conversion.txt"), quote=FALSE, append=FALS
 
 write.table(dataframe, file = "male_tumor_only.txt", sep = "\t", col.names = TRUE, row.names = TRUE, quote=FALSE, append=FALSE)
 
+# iterative
+files <- list.files(path="/file-directory", pattern="*_summits.bed", full.names=TRUE, recursive=FALSE)
+lapply(files, function(x) {
+  peak_data = read_tsv(x, col_names=FALSE)
+  colnames(peak_data) = c('name', 'start', 'end', 'peak', 'score')
+  
+  # 1. Open jpeg file
+  jpeg(filename= paste0(substr(x, start=3, stop=15), "_summits_peakDistribution.jpg"), width = 800, height = 400, pointsize = 20, quality = 100,)
+  # 2. Create the plot
+  hist(peak_data$score, xlim = c(0, 400), breaks = 1000, main = substr(x, start=3, stop=15))
+  # 3. Close the file
+  dev.off()
+})
+                      
 #sort
 data.frame[order(vector / df$colnames),] #sort row
 
@@ -270,6 +284,7 @@ matrix = cor(correlation_prepared_data.frame)
     row : gene
     column : sampple
     
+                      
     
 
 
