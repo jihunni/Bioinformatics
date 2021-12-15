@@ -1,5 +1,13 @@
 # Plot
 plot(X_data, Y_data, pch=".", main="Title", ylab="Y_axis", xlab="X_axis",xlim=c(0,10),ylim=c(0,2.0))
+hist(data, breaks= 1000, main="title", ,xlim=c(0,10), ylim=c(0,2.0))
+#save plot
+  # 1. Open jpeg file
+  jpeg(filename= paste0(substr(x, start=3, stop=15), "_summits_peakDistribution.jpg"), width = 800, height = 400, pointsize = 20, quality = 100,)
+  # 2. Create the plot
+  hist(peak_data$score, xlim = c(0, 400), breaks = 1000, main = substr(x, start=3, stop=15))
+  # 3. Close the file
+  dev.off()
 
 ###heatmap###
 library(pheatmap)
