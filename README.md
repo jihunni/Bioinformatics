@@ -88,6 +88,12 @@ Cell types can determine cancer type
 ## single cell omics
 - Clonal Decomposition and DNA Replication States Defined by Scaled Single-Cell Genome Sequencing | Cell, 2019 | [paper](https://www.sciencedirect.com/science/article/pii/S0092867419311766)
 - Clonal fitness inferred from time-series modelling of single-cell cancer genomes | Nature, 2021 | [paper](https://www.nature.com/articles/s41586-021-03648-3#data-availability) | [Data](https://ega-archive.org/studies/EGAS00001004448)
+- chromVAR: inferring transcription-factor-associated accessibility from single-cell epigenomic data
+- https://satijalab.org/signac/articles/overview.html
+- Comprehensive Integration of Single-Cell Data
+- A comparison of automatic cell identification methods for single-cell RNA sequencing data
+- https://github.com/lwtan90/scATACseq_wilsontan
+- https://satijalab.org/signac/0.2/articles/pbmc_vignette.html
 
 ## chromosome sturcutre interaction
 - Chromosome Conformation Capture Carbon Copy (5C): A massively parallel solution for mapping interactions between genomic elements 
