@@ -123,7 +123,7 @@ head( dataframe )
 str(datafrane) #structure of dataframe 
 rowData( dataframe )
 colData( sdataframe )
-
+           
 #drop a column
 new.data.frame = subset(data.frame, select = -c(1))
 
@@ -133,6 +133,9 @@ ex. new.dataframe=drop_na(old.dataframe, Sex)
 # merge by row & add single observation into data.frame
 new_df = rbind(old_df, add_df)
 merged_df = merge(dataframe1, dataframe2, by=0) #merge data according to row naems
+
+# drop a row with NA
+new.data.frame = na.omit(data.frame)
 
 #change name of column
 rename.variable(df, old name of column, new name of column)
