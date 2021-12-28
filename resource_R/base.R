@@ -218,8 +218,10 @@ data.frame(mapply('*',df,v))
 #summary with package 'dplyr'
 #statistics
 statistics = data.frame %>%
+    filter(colname==condition) %>%
     group_by(colnames) %>%
-    summarise(number=n())
+    summarise(number=n()) %>%
+    na.omit()
 
 Male tumor_free 94
 male tumor 32
