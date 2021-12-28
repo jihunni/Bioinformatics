@@ -283,11 +283,7 @@ lapply(files, function(x) {
 data.frame[order(vector / df$colnames),] #sort row
 
 #correlation
-matrix = cor(correlation_prepared_data.frame) 
+matrix = cor(correlation_prepared_data.frame, "complete.obs") 
     row : gene
     column : sampple
-    
-                      
-    
-
-
+    "complete.obs" : without NA
