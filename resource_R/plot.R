@@ -1,4 +1,6 @@
 # Plot
+par("mar") # check margin
+par(mar=c(4,4,4,2)) #button, left, up, right margin
 plot(X_data, Y_data, pch=".", main="Title", ylab="Y_axis", xlab="X_axis",xlim=c(0,10),ylim=c(0,2.0))
 hist(data, breaks= 1000, main="title", ,xlim=c(0,10), ylim=c(0,2.0))
 #save plot
