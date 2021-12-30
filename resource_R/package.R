@@ -50,6 +50,18 @@ length(which(gene_id$gene_id != 'NA')) #17311
 TCGA_LIHC_gene_count = cbind(gene_id, TCGA_LIHC_gene_count) #add sample column at first
 
 
+# to map EntrezID to gene symbol
+library(AnnotationDbi)
+library(EnsDb.Hsapiens.v86)
+library(TxDb.Hsapiens.UCSC.hg38.knownGene)
+#keytypes(TxDb.Hsapiens.UCSC.hg38.knownGene)
+#columns(EnsDb.Hsapiens.v86)
+entrez = anno$geneId
+annotations_edb = AnnotationDbi::select(EnsDb.Hsapiens.v86, keys=entrez, columns=c("GENEID", "GENENAME", "SYMBOL"), keytype="ENTREZID")
+annotations_edb$ENTREZID = as.character(annotations_edb$ENTREZID)
+  anno = anno %>%
+    left_join(annotations_edb, by=c("geneId"="ENTREZID")) 
+
 #annotation, biomart
 require("biomaRt")
 mart <- useMart("ENSEMBL_MART_ENSEMBL")
