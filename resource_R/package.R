@@ -127,3 +127,29 @@ filter = listFilters(mart)
 convert_genes <- getBM(filters="entrezgene_id", 
                attributes=c("ensembl_gene_id","entrezgene_id"), 
                values=entrezgene, mart=mart)
+
+#TCGAutils ######################################
+# To convert TCGA UUID to Barcode
+library(TCGAutils)
+library(curatedTCGAData)
+library(MultiAssayExperiment)
+library(RTCGAToolbox)
+library(BiocFileCache)
+library(rtracklayer)
+library(R.utils)
+
+UUIDtoBarcode("93d5a265-c116-4179-9fd7-8057d4b53527", from_type = "file_id")
+
+#To convert file UUID into Barcode 
+library(tidyverse)
+metadata = read_tsv('TCGA-COAD_ATACseq_metadata.tsv')
+
+
+for (iteration in 1:length(metadata$`File UUID`)){
+  file_uuid = metadata$`File UUID`[iteration]
+  barcode = UUIDtoBarcode(file_uuid, from_type = "file_id")
+  print(barcode)
+  metadata$'barcode'[iteration] = barcode$associated_entities.entity_submitter_id
+}
+save(metadata, file='TCGA-COAD_ATACseq_metadata.rda')
+
