@@ -20,3 +20,14 @@ getBM(attributes='hgnc_symbol',
       filters = 'ensembl_gene_id', 
       values = ensemblsIDS, 
       mart = ensembl)
+
+
+# to map EntrezID to gene symbol
+keytypes(TxDb.Hsapiens.UCSC.hg38.knownGene)
+columns(EnsDb.Hsapiens.v86)
+entrez = ENCODE_intersection_anno$geneId
+annotations_edb = AnnotationDbi::select(EnsDb.Hsapiens.v86, keys=entrez, columns=c("GENEID", "GENENAME", "SYMBOL"), keytype="ENTREZID")
+annotations_edb$ENTREZID = as.character(annotations_edb$ENTREZID)
+ENCODE_intersection_anno %>%
+  left_join(annotations_edb, by=c("geneId"="ENTREZID")) %>%
+  write.table(file='data/ENCODE_intersection_anno.txt', sep='\t', quote=FALSE, row.names = FALSE)
