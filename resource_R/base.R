@@ -85,6 +85,7 @@ conversion_vector = gsub("[.]","-", input_vector) #change '.' into '-'
 e.g. conversion = gsub("[.]","-", GTEx_sample_id$conversion)
 e.g. TCGA id converter
 
+new_string = gsub('.{1}$', '', old_strong)  #remove last character ')'
 
 
 <vector>
