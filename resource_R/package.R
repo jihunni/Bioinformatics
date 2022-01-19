@@ -37,7 +37,8 @@ Try removing ‘C:\R\R-4.0.3\library/00LOCK
 # Tidyr
 ## To split one column into two column by deliminator '/'
 new_df = tidyr::separate(data= old_df, col= ColName, sep= '/', into=c("col_name1", "colname2"))
-
+## To unite two column into one column by deliminator '/'
+new_df = tidyr::unite(data = old_df, new_colName, old_ColName1, old_ColName2, sep = '/')
 # dpyler
 ##extract into new data.frame
 new_data.frame=dpyler::select(data.frame, colum name)
