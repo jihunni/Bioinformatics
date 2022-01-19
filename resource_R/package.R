@@ -80,10 +80,10 @@ annotations_edb$ENTREZID = as.character(annotations_edb$ENTREZID)
 
 #annotation, biomart
 require("biomaRt")
-mart <- useMart("ENSEMBL_MART_ENSEMBL")
 listMarts()
-mart <- useDataset("hsapiens_gene_ensembl", mart)
+mart <- useMart("ENSEMBL_MART_ENSEMBL")
 listDatasets(mart)
+mart <- useDataset("hsapiens_gene_ensembl", mart)
 filter = listFilters(mart)
 
 ens <- c("ENSG00000100601.5", "ENSG00000178826.6",
@@ -107,6 +107,23 @@ colnames(annotLookup) <- c(
     c("ensembl_transcript_id", "ensembl_gene_id",
       "gene_biotype", "external_gene_name"))
 
+# BioMart : ensemble_transcript
+library(biomaRt)
+listMarts()
+mart <- useMart("ENSEMBL_MART_ENSEMBL")
+listDatasets(mart)
+mart <- useDataset("hsapiens_gene_ensembl", mart)
+filter = listFilters(mart) # to check the type of key
+
+ensLookup = peakAnno$transcriptId
+annotLookup <- getBM(
+  mart=mart,
+  attributes=c("ensembl_transcript_id", "ensembl_gene_id",
+               "gene_biotype", "external_gene_name"),
+  filter="ensembl_transcript_id_version",
+  values=ensLookup,
+  uniqueRows=TRUE)
+                              
 #anntoation biomart version 2 (no digital below 0)
 require("biomaRt")
 mart <- useMart("ENSEMBL_MART_ENSEMBL")
