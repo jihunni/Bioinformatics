@@ -218,20 +218,6 @@ table(vector or data.frame)
 #multiply column by column with vector v
 data.frame(mapply('*',df,v))
 
-#summary with package 'dplyr'
-#statistics
-statistics = data.frame %>%
-    filter(colname==condition) %>%
-    group_by(colnames) %>%
-    summarise(number=n()) %>%
-    na.omit()
-
-Male tumor_free 94
-male tumor 32
-female tumor_free 60
-female tumor 33
-
-rm(statistics)
 
 <matrix>
 #the number of column and row
@@ -244,10 +230,6 @@ merged_matrix = merge(matrix_left, matrix_right, by = "row.names", all = TRUE)
 <function>
 ??functioin_name
 help(function_nam)
-
-
-
-
 
 
 <File I/O>
