@@ -87,7 +87,12 @@ e.g. TCGA id converter
 
 new_string = gsub('.{1}$', '', old_strong)  #remove last character ')'
 
+data.frame$col = lapply(data.frame$col, function(x){
+  gsub('\\|', '/', x)
+}) # to change a special character '|' ino non-special char '/'
 
+\^$.?*|+()[ : special character in R
+                        
 <vector>
 #random samples
 e.g. sample(x=1:30, size = 5)
@@ -149,9 +154,6 @@ rownames(data.frame) = c("name1", "name2")
 new_column = data.frame(sample = rownames(GTEx_liver))
 merged_df = cbind(new_column, data.frame) #add sample column at first
 
-#extract into new data.frame
-new_data.frame=select(data.frame, colum name)
-new_data.frame=filter(data.frame, boolian for all row)
 
 #find out wheter the specific substring exists in data.frame (version 1)
     #detect mathces
