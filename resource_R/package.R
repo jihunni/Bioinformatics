@@ -33,7 +33,23 @@ Try removing ‘C:\R\R-4.0.3\library/00LOCK
 1. install.packages("설치하고 싶은 패키지 이름", dependencies = TRUE, INSTALL_opts = "--no-lock")
 2. find the file:‘C:\Program Files\R\R-3.6.1\library/00LOCK’, delete the file"00LOCK" then it works again
 
+###Tidyverse###
+# Tidyr
+## To split one column into two column by deliminator '/'
+new_df = tidyr::separate(data= old_df, col= ColName, sep= '/', into=c("col_name1", "colname2"))
 
+# dpyler
+##extract into new data.frame
+new_data.frame=dpyler::select(data.frame, colum name)
+new_data.frame=dpyler::filter(data.frame, boolian for all row)
+
+##statistics
+statistics = data.frame %>%
+    filter(colname==condition) %>%
+    group_by(colnames) %>%
+    summarise(number=n()) %>%
+    na.omit()
+                              
 ###Bioinformatics###
 #convert gene name to ensemble gene ID
 library("AnnotationDbi")
