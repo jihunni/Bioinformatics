@@ -12,11 +12,18 @@ y <- dnorm(x, mean = 2.5, sd = 0.5)
 qnorm(p=0.025, mean=0, sd=1, lower.tail = TRUE)
 qnorm(p=0.025, mean=0, sd=1, lower.tail = FALSE)
 
-#normalization
+#normalization (z-score)
+## 1
 distribution = correlation_coefficient
 distribution = (distribution - mean(distribution)) / sd(distribution) #normalization
 summary(distribution)
 hist(distribution)
+
+## 2
+pathway_matrix = data.frame(lapply(pathway_matrix, as.numeric)) # convert list into dataframe
+table(is.na(pathway_matrix)) #check NA
+pathway_matrix = as.matrix(pathway_matrix) #convert dataframe into matrix
+pathway_matrix_zscore = (pathway_matrix - mean(pathway_matrix))/sd(pathway_matrix) # transform into z-score
 
 # Goodness of fit test : Kolmogorov–Smirnov test
 # ref: https://www.r-bloggers.com/2015/01/goodness-of-fit-test-in-r/
