@@ -28,3 +28,7 @@ pathway_matrix_zscore = (pathway_matrix - mean(pathway_matrix))/sd(pathway_matri
 # Goodness of fit test : Kolmogorov–Smirnov test
 # ref: https://www.r-bloggers.com/2015/01/goodness-of-fit-test-in-r/
 ks_test = ks.test(y_1, y_2) # y_1 and y_2 are probability density
+
+# basic statistic by column in a dataframe
+apply(data.frame, 1, median) #median by row
+apply(data.frame, 2, median) #median by column
