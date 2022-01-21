@@ -17,16 +17,16 @@ library(pheatmap)
 #install.packages("RColorBrewer") 
 library("RColorBrewer") 
 
-rownames(sampleDistMatrix) <- vsd$condition
-colnames(sampleDistMatrix) <- colnames(countData)
+rownames(sampleDistMatrix) <- vsd$condition #condition
+colnames(sampleDistMatrix) <- colnames(countData) #ID label
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
 #annotation
 color_code=data.frame(sample = rownames(sampleDistMatrix))
 rownames(color_code) = colnames(sampleDistMatrix)
 #heatmap
 pheatmap(sampleDistMatrix,
-         clustering_distance_rows=sampleDists,
-         clustering_distance_cols=sampleDists,
+         clustering_distance_rows='correlation',
+         clustering_distance_cols='correlation',
          #  cutree_rows = 2,
          #  cutree_cols = 2,
          col=colors,
@@ -34,6 +34,7 @@ pheatmap(sampleDistMatrix,
          show_colnames = F,
          show_rownames = F,
          main = "Sample-to-sample distances(HCC without hepatitis))")
+
 
 
 ###ggplot###
