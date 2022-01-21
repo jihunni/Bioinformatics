@@ -12,7 +12,11 @@ hist(data, breaks= 1000, main="title", ,xlim=c(0,10), ylim=c(0,2.0))
   dev.off()
 
 ###heatmap###
+#install.packages("pheatmap")
 library(pheatmap)
+#install.packages("RColorBrewer") 
+library("RColorBrewer") 
+
 rownames(sampleDistMatrix) <- vsd$condition
 colnames(sampleDistMatrix) <- colnames(countData)
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
