@@ -32,6 +32,10 @@
     ```
     http://hgdownload.cse.ucsc.edu/admin/exe/
     ```
+    
+    
+
+    
 
     Next, to execute the conversion,
     ```
@@ -39,6 +43,14 @@
     $ wig2bed < data.wig > data.bed
     ```
   
+      
+    Trouble shooting:  
+    `Error: SortDetails.cpp, 1006: Unable to create FILE* for temp file: No space left on device. Out of memory.`  
+    
+    ```
+    $ wig2bed --max-mem 10G --sort-tmpdir=/home/jihun/data/hg38_phyloP100way/tmp_sort < hg38.phyloP100way.wig > hg38.phyloP100way.bed
+    ```
+    
   To convert gtf format into bed format (GENECODE)  
     > RefSeq vs Ensembl vs GENCODE
     > https://bioinformatics.stackexchange.com/questions/21/feature-annotation-refseq-vs-ensembl-vs-gencode-whats-the-difference
