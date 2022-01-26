@@ -1,3 +1,17 @@
+# statistics
+mean()
+median()
+sd()
+
+## summary of dataframe (tidyverse)
+base 참고
+
+## summary of dataframe (data.table)
+library(data.table)
+summary_df = data.table(summary_df)
+summary_df = summary_df[,.(mean=mean(colname_summary),median=median(colname_summary), sd=sd(colname_summary)),by = .(colname_group)]
+
+
 # quantile
 quantile(correlation_coefficient, probs=c(0.025, 1-0.025))
 
