@@ -65,6 +65,6 @@
   
   To map phyloP into Ensembl ID,  
     ```
-    $ bedmap --echo --echo-map-id-uniq data.bed gencode.v21.genes.bed > data_with_overlapping_gencode_gene_names.bed
+    $ bedmap --echo --echo-map-id-uniq --skip-unmapped --delim '\t' data.bed gencode.v21.genes.bed > data_with_overlapping_gencode_gene_names.bed
     ```
  
