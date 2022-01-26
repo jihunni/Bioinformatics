@@ -7,6 +7,7 @@ sd()
 base 참고
 
 ## summary of dataframe (data.table)
+Ref: https://tariat.tistory.com/576
 library(data.table)
 summary_df = data.table(summary_df)
 summary_df = summary_df[,.(mean=mean(colname_summary),median=median(colname_summary), sd=sd(colname_summary)),by = .(colname_group)]
