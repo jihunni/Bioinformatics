@@ -44,6 +44,10 @@ new_df = tidyr::unite(data = old_df, new_colName, old_ColName1, old_ColName2, se
 new_data.frame=dpyler::select(data.frame, colum name)
 new_data.frame=dpyler::filter(data.frame, boolian for all row)
 
+# data.table ##########################                           
+library(data.table)
+df = fread('file_name.tsv', sep='\t', stringsAsFactors=TRUE, header=FALSE, col.names=c('name', 'start', 'end', 'peak', 'phyloP', 'gene'))
+                              
 ##statistics
 statistics = data.frame %>%
     filter(colname==condition) %>%
