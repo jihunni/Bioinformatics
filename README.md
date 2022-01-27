@@ -106,14 +106,19 @@ Cell types can determine cancer type
 - A Review of Pathway-Based Analysis Tools That Visualize Genetic Variants   
 ## Database
 - NCBI
+- ENSEMBL
+- UCSC
 - TCGA
   - GDC Data User's Guide
   - Before and After: Comparison of Legacy and Harmonized TCGA Genomic Data Commons’ Data
 - cBioPortal
 - ENCODE
+- GENCODE
+- KEGG
 - COSMIC [homepage](https://cancer.sanger.ac.uk/cosmic)
 - Drug Repurposing Hub | BROAD Institute | [homepage](https://clue.io/repurposing)
 - Human Gene Mutation Database (HGMD)
+- Human Protein Atlas (HPA)
 
 # medical bioinformatics
 - Phenotypic signatures in clinical data enable systematic identification of patients for genetic testing
