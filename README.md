@@ -113,6 +113,7 @@ Cell types can determine cancer type
 - ENCODE
 - COSMIC [homepage](https://cancer.sanger.ac.uk/cosmic)
 - Drug Repurposing Hub | BROAD Institute | [homepage](https://clue.io/repurposing)
+- Human Gene Mutation Database (HGMD)
 
 # medical bioinformatics
 - Phenotypic signatures in clinical data enable systematic identification of patients for genetic testing
