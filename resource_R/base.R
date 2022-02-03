@@ -237,7 +237,11 @@ help(function_nam)
 read_delim()
 read_tsv(filename) #readr package
 df <- read.csv(file="my.large.file.csv",nrows=2000)
-    
+
+## excel file
+library("readxl")
+hmr = read_excel("fileName.xlsx")
+
     
 #save and load in rda file
 save(variable, file = "mydata.rda")
