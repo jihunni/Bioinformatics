@@ -22,7 +22,7 @@ d, z, (mean, sd) = wrappers.calculate_proximity(network, nodes_from, nodes_to, m
 running
 ```
 from toolbox import wrappers
-file_name = "proximity/data/cor0.6.sif""
+file_name = "proximity/data/cor0.6.sif"
 network = wrappers.get_network(file_name, only_lcc = True)
 nodes_from = ["A", "C"]
 nodes_to = ["B", "D", "E"]
