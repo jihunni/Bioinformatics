@@ -1,4 +1,15 @@
 # metagenomics
+# Database
+- NCBI RefSeq : reference genome
+- JGI IMG : metagenomics
+- MIBiG : BiG
+- antiSMASH : BiG
+- GreenGenes : 16S
+- SILVA
+- RDP
+- Genbank : 16S
+- 
+
 # Microbial community analysis
 ## Quality Control of raw reads
 ### Quality Control
