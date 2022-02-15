@@ -9,6 +9,14 @@
 - RDP
 - Genbank : 16S
 - 
+## Genebank
+1) Using the batch Entrez website  
+https://www.ncbi.nlm.nih.gov/sites/batchentrez  
+2) Using Perl: (copy into your terminal and press return/enter)
+	```
+	perl -e 'use LWP::Simple;getstore("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&retmode=text&id=".join(",",qw(6701965 6701969 6702094 6702105 6702160)),"seqs.fasta");'
+	```
+3) 
 
 # Microbial community analysis
 ## Quality Control of raw reads
