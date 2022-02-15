@@ -1,14 +1,19 @@
 # metagenomics
 # Database
-- NCBI RefSeq : reference genome
 - JGI IMG : metagenomics
-- MIBiG : BiG
-- antiSMASH : BiG
 - GreenGenes : 16S
 - SILVA
 - RDP
+## reference genome
 - Genbank : 16S
-- 
+- NCBI RefSeq : reference genome
+- EMBL-EBI
+	ref : https://www.ebi.ac.uk/genomes/bacteria.html
+	
+## secondary metabolite
+- MIBiG : BiG
+- antiSMASH : BiG
+
 ## Genebank
 1) Using the batch Entrez website  
 https://www.ncbi.nlm.nih.gov/sites/batchentrez  
@@ -16,7 +21,6 @@ https://www.ncbi.nlm.nih.gov/sites/batchentrez
 	```
 	perl -e 'use LWP::Simple;getstore("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&retmode=text&id=".join(",",qw(6701965 6701969 6702094 6702105 6702160)),"seqs.fasta");'
 	```
-3) 
 
 # Microbial community analysis
 ## Quality Control of raw reads
