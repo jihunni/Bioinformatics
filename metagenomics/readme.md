@@ -7,6 +7,9 @@
 ## reference genome
 - Genbank : 16S
 - NCBI RefSeq : reference genome
+	- To download reference bacterial genome, 
+		- https://github.com/jihunni/Bioinformatics/blob/main/metagenomics/RefSeq_ftp_download.sh
+		- https://github.com/jihunni/Bioinformatics/blob/main/metagenomics/RefSeq_ftp_download_prep.R
 - EMBL-EBI
 	ref : https://www.ebi.ac.uk/genomes/bacteria.html
 	
@@ -21,7 +24,6 @@ https://www.ncbi.nlm.nih.gov/sites/batchentrez
 	```
 	perl -e 'use LWP::Simple;getstore("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&retmode=text&id=".join(",",qw(6701965 6701969 6702094 6702105 6702160)),"seqs.fasta");'
 	```
-
 # Microbial community analysis
 ## Quality Control of raw reads
 ### Quality Control
