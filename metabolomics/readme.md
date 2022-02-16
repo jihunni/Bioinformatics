@@ -27,3 +27,9 @@ model = addReaction(model,'bioMass','reactionFormula', 'M_m02392c[C_c] + M_m0172
 model = changeObjective(model, 'bioMass');
 FBAsolution = optimizeCbModel(model);
 ```
+
+
+# GEM paper
+- Tissue-based map of the human proteome 
+  - Tissue-specific GEM (HMR2)
+- Importance of the biomass formulation for cancer metabolic modeling and drug prediction
