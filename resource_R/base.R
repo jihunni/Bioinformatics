@@ -218,6 +218,9 @@ table(vector or data.frame)
 #multiply column by column with vector v
 data.frame(mapply('*',df,v))
 
+# To filter the row with rowSums
+df_filter = df[rowSums(df) != 0,]
+df_filter = df[rowSums(df) > 5,]
 
 <matrix>
 #the number of column and row
