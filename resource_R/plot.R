@@ -44,9 +44,10 @@ df = data.frame(
     nprc=rep(c(2, 4, 6, 8), 3), 
     speedup=c(c(2, 4, 6, 8), c(4.27, 2.17, 1.45, 1.17, 51.53, 53.73, 47.11, 47.74)^(-1)*8.49942))
 
+
 ggplot(data=df, aes(x=nprc, y=speedup, group=method)) +
     geom_line(aes(color=method)) +
-    geom_point(aes(shape=method, color=method), size=2) +
+    geom_point(aes(shape=method, color=method), size=2)
     
 #scatter plot
 ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_normal < 0.05)) +
@@ -99,6 +100,10 @@ sp + geom_hline(yintercept=1, size=.1, linetype="dotted")
 sp + geom_vline(xintercept=0, size=.1, color="red")
 
 ggsave(paste0("./figure/",".png"), width=25, height = 15, units='cm', limitsize = FALSE)
+
+# to assign on order on axis
+level_order = factor(as.numeric(df$time)) # to assign the order on x-axis
+ggplot(data=df, aes(x=level_order, y=colName_in_df)) +
 
 ### regression
 
