@@ -4,127 +4,339 @@ library("MatchIt")
 ### example - HCC application ###
 reference: https://cran.r-project.org/web/packages/MatchIt/vignettes/MatchIt.html
 
-save(HCC_geneCount, file='HCC_geneCount.rda') #log transformed data (log+1)?
+#load data
+save(HCC_geneCount, file='HCC_geneCount.rda') #log transformed data (log+1) is not applied
 save(PanCan_HCC_clinic2, file='HCC_clinic_data.rda')
 
-#drop_na on column sex
-clinic=drop_na(PanCan_HCC_clinic2, Sex) 
-rm(PanCan_HCC_clinic2)
+##LIHC clinical data from TCGA Assembler2
+duplicated(clinic_LIHC) #No duplication
+substr(colnames(HCC_geneCount),start=1,stop=12) %in% clinic_LIHC$bcr_patient_barcode #all samples are included in clinical data
 
-HCC_genecount_filter = HCC_geneCount[,colnames(HCC_geneCount) %in% clinic$case]
-rownames(HCC_genecount_filter) = rownames(HCC_geneCount)
+HCC_clinic = data.frame(sample=colnames(HCC_geneCount), patient = substr(colnames(HCC_geneCount),start=1,stop=12), type = substr(colnames(HCC_geneCount),start=14,stop=15))
+HCC_clinic$type[HCC_clinic$type=='01'] = 'tumor'
+HCC_clinic$type[HCC_clinic$type=='02'] = 'tumor'
+HCC_clinic$type[HCC_clinic$type=='11'] = 'normal'
+table(HCC_clinic$type)
 
-#check the order of data
-colnames(HCC_genecount_filter) == clinic$case
+HCC_clinic2 = left_join(HCC_clinic, clinic_LIHC, by=c("patient" = "bcr_patient_barcode"))
 
-save(HCC_genecount_filter, clinic, file='HCC_geneCount_and_clinic.rda')
+save(HCC_clinic2, file='HCC_clinic2_2021.06.06.rda')
+
+
 
 #data pre-processing
-clinic_process = clinic[,c(1,2,6,7,8,23,24,25,27)]
-str(clinic_process)
-clinic_process=cbind(clinic_process, clinic["American Joint Committee on Cancer Metastasis Stage Code"])
+colnames(HCC_clinic2)
+HCC_clinic3 = HCC_clinic2[,c(1,2,3,8,11,12,13,29,30,31,32,33,58, 19, 20, 21)]
+str(HCC_clinic3)
 
+#gender
+HCC_clinic3$sample == HCC_clinic$sample
+HCC_clinic3$gender = HCC_clinic2$gender
+
+HCC_clinic3$gender[HCC_clinic3$gender == 'MALE'] = 'male'
+HCC_clinic3$gender[HCC_clinic3$gender == 'FEMALE'] = 'female'
+HCC_clinic3$gender = as.factor(HCC_clinic3$gender)
 ##Diagnosis Age
-table(clinic_process$`Diagnosis Age`)
-which(is.na(clinic_process$`Diagnosis Age`)) #133
-clinic_process$`Diagnosis Age` = unlist(lapply(clinic_process$`Diagnosis Age`, as.numeric))
+table(HCC_clinic3$age_at_diagnosis)
+which(HCC_clinic3$age_at_diagnosis == '[Not Available]')
+HCC_clinic3$age_at_diagnosis[which(HCC_clinic3$age_at_diagnosis == '[Not Available]')] = NA
+
+
+HCC_clinic3$age_at_diagnosis = unlist(lapply(HCC_clinic3$age_at_diagnosis, as.numeric))
     #unlist:convert list into vector
-clinic_process$`Diagnosis Age`[133] = mean(clinic_process$`Diagnosis Age`[-133]) #fill mean value in NA row
-##sex
-clinic_process$Sex = factor(clinic_process$Sex)
-is.na(clinic_process$Sex)
-##Neoplasm Disease Stage American Joint Committee on Cancer Code
-clinic_process$'Neoplasm Disease Stage American Joint Committee on Cancer Code' = factor(clinic$'Neoplasm Disease Stage American Joint Committee on Cancer Code')
-table(clinic_process$'Neoplasm Disease Stage American Joint Committee on Cancer Code')
+HCC_clinic3$age_at_diagnosis[134] = mean(HCC_clinic3$age_at_diagnosis[-134]) #fill mean value in NA row
 
-###changed name
-table(clinic_process$tumor_stage)
-clinic_process$tumor_stage[clinic_process$tumor_stage=='T2A'|clinic_process$tumor_stage=='T2B'] = 'T2'
-clinic_process$tumor_stage[clinic_process$tumor_stage=='T3A' | clinic_process$tumor_stage=='T3B'] = 'T3'
-clinic_process$tumor_stage = factor(clinic_process$tumor_stage)
 
-clinic_process$tumor_stage[is.na(clinic_process$tumor_stage)] = 'T2' #fill NA with most frequent value
 
-## I want to change into int. 1,3,4 and fill mean in NA
+##tumor stage
+##convert TX, T0, Na into 0
+colnames(HCC_clinic3)[9] ='tumor_pathologic'
+table(HCC_clinic3$tumor_pathologic)
 
-##American Joint Committee on Cancer Tumor Stage Code
-clinic_process$`American Joint Committee on Cancer Tumor Stage Code` = factor(clinic_process$`American Joint Committee on Cancer Tumor Stage Code`)
-is.na(clinic_process$`American Joint Committee on Cancer Tumor Stage Code`)
+HCC_clinic3$tumor_pathologic[which(is.na(HCC_clinic3$tumor_pathologic))] = 0
+HCC_clinic3$tumor_pathologic = gsub("TX",0, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T1",1, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T2",2, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T2a",2, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T2b",2, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T3",3, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T3a",3, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T3b",3, HCC_clinic3$tumor_pathologic)
+HCC_clinic3$tumor_pathologic = gsub("T4",4, HCC_clinic3$tumor_pathologic)
 
-##Person Neoplasm Cancer Status
-clinic_process$`Person Neoplasm Cancer Status`  = factor(clinic_process$`Person Neoplasm Cancer Status`)
-table(is.na(clinic_process$`Person Neoplasm Cancer Status`))
-table(clinic_process$`Person Neoplasm Cancer Status`)
-clinic_process$`Person Neoplasm Cancer Status`[is.na(clinic_process$`Person Neoplasm Cancer Status`)] = "Tumor Free" #fill the most frequent value
+HCC_clinic3$tumor_pathologic = unlist(lapply(HCC_clinic3$tumor_pathologic, as.numeric))
+
 
 ###chagned name
-table(clinic_process$neoplasm_stage)
-clinic_process$neoplasm_stage
-clinic_process$neoplasm_stage[clinic_process$neoplasm_stage=='STAGE IIIA' | clinic_process$neoplasm_stage=="STAGE IIIB" | clinic_process$neoplasm_stage=="STAGE IIIC"] = "STAGE III"
+colnames(HCC_clinic3)[12] ='tumor_stage'
+#HCC_clinic3$tumor_stage = HCC_clinic2$ajcc_pathologic_tumor_stage ##reverse
+table(HCC_clinic3$tumor_stage)
+is.na(HCC_clinic3$tumor_stage)
 
-clinic_process$neoplasm_stage[clinic_process$neoplasm_stage=='STAGE IVA' | clinic_process$neoplasm_stage=="STAGE IVB"] = "STAGE IV"
-clinic_process$neoplasm_stage = factor(clinic_process$neoplasm_stage)
-clinic_process$neoplasm_stage[is.na(clinic_process$neoplasm_stage)] = 'STAGE I'
+#Be careful! before chaning string, check whether it gives an impact to another strings.
+HCC_clinic3$tumor_stage = gsub("Stage I",1, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage II",2, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage III",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IIIA",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IIIB",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IIIC",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IV",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IVA",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("Stage IVB",4, HCC_clinic3$tumor_stage)
+
+HCC_clinic3$tumor_stage = gsub("1",1, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1I",2, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1II",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1IIA",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1IIB",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1IIC",3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("2I", 3, HCC_clinic3$tumor_stage) ? 
+HCC_clinic3$tumor_stage = gsub("2IA", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("2IB", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("2IC", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("3A", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("3B", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("3C", 3, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1V",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1VA",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("1VB",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("4A",4, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage = gsub("4B",4, HCC_clinic3$tumor_stage)
+
+##randomly distribute NA value into stage
+#HCC_clinic3$tumor_stage = gsub("[Discrepancy]",1, HCC_clinic3$tumor_stage)
+HCC_clinic3$tumor_stage[HCC_clinic3$tumor_stage == '[Discrepancy]'] = '[Not Available]'
+HCC_clinic3$tumor_stage[which(HCC_clinic3$tumor_stage == "[Not Available]")][1:16] = 1
+HCC_clinic3$tumor_stage[which(HCC_clinic3$tumor_stage == "[Not Available]")][1:9] = 2
+HCC_clinic3$tumor_stage[which(HCC_clinic3$tumor_stage == "[Not Available]")][1:6] = 3
+
+HCC_clinic3$tumor_stage = unlist(lapply(HCC_clinic3$tumor_stage, as.numeric))
+
 ## Race Category
-clinic_process$`Race Category` = factor(clinic_process$`Race Category`)
-table(clinic_process$`Race Category`)
-is.na(clinic_process$`Race Category`)
-clinic_process$`Race Category`[is.na(clinic_process$`Race Category`)] = "White" #fill the most frequent value
-save(clinic_process, file='HCC_clinic_data_after_processing.rda')
-rm(clinic, HCC_geneCount)
+##HCC_clinic3$race = HCC_clinic2$race
+table(HCC_clinic3$ethnicity)
+table(HCC_clinic3$race)
+HCC_clinic3$race[HCC_clinic3$ethnicity == 'HISPANIC OR LATINO'] = 'HISPANIC OR LATINO'
+HCC_clinic3$race[HCC_clinic3$race == 'AMERICAN INDIAN OR ALASKA NATIVE'] = 'Hispanic/Native'
+HCC_clinic3$race[HCC_clinic3$race == 'HISPANIC OR LATINO'] = 'Hispanic/Native'
+HCC_clinic3$race[HCC_clinic3$race == '[Not Available]'] = 'Not'
+HCC_clinic3$race[HCC_clinic3$race == '[Not Evaluated]'] = 'Not'
+HCC_clinic3$race[HCC_clinic3$race == '[Unknown]'] = 'Not'
 
-##American Joint Committee on Cancer Metastasis Stage Code
-clinic_process$`American Joint Committee on Cancer Metastasis Stage Code` = factor(clinic_process$`American Joint Committee on Cancer Metastasis Stage Code`)
-is.na(clinic_process$`American Joint Committee on Cancer Metastasis Stage Code`)
-table(clinic_process$`American Joint Committee on Cancer Metastasis Stage Code`)
+HCC_clinic3$race = as.factor(HCC_clinic3$race)
 
-1. Planning and Data Load
+#metastasis_pathologic
+colnames(HCC_clinic3)[11] = 'metastasis_pathologic'
+table(HCC_clinic3$metastasis_pathologic)
+HCC_clinic3$metastasis_pathologic = as.factor(HCC_clinic3$metastasis_pathologic)
+
+#HBV and HCV
+library(stringr)
+
+
+#initialization
+table(HCC_clinic3$history_hepato_carcinoma_risk_factors)
+HCC_clinic3['HBV'] = NA
+HCC_clinic3['HCV'] = NA
+HCC_clinic3['alcohol'] = NA
+
+##history_hepato_carcinoma_risk_factors
+index = str_detect(HCC_clinic3$history_hepato_carcinoma_risk_factors, 'Hepatitis B')
+HCC_clinic3$HBV[index] = TRUE
+
+index = str_detect(HCC_clinic3$history_hepato_carcinoma_risk_factors, 'Hepatitis C')
+HCC_clinic3$HCV[index] = TRUE
+
+index = str_detect(HCC_clinic3$history_hepato_carcinoma_risk_factors, 'Alcohol consumption')
+HCC_clinic3$alcohol[index] = TRUE
+HCC_clinic3$alcohol[is.na(HCC_clinic3$alcohol)] = FALSE
+
+
+##iral_hepatitis_serology
+table(HCC_clinic3$viral_hepatitis_serology)
+
+index = str_detect(HCC_clinic3$viral_hepatitis_serology, 'Hepatitis  C Antibody')
+HCC_clinic3$HCV[index] = TRUE
+index = str_detect(HCC_clinic3$viral_hepatitis_serology, 'Hepatitis C Virus RNA')
+HCC_clinic3$HCV[index] = TRUE
+HCC_clinic3$HCV[is.na(HCC_clinic3$HCV)] = FALSE
+
+
+
+index = str_detect(HCC_clinic3$viral_hepatitis_serology, 'Hepatitis B Surface Antigen')
+HCC_clinic3$HBV[index] = TRUE
+
+index = str_detect(HCC_clinic3$viral_hepatitis_serology, 'HBV Core Antibody')
+HCC_clinic3$HBV[index] = FALSE
+HCC_clinic3$HBV[is.na(HCC_clinic3$HBV)] = FALSE
+
+###HBV positive
+Hepatitis  C Antibody|HBV Surface Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV DNA 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Surface Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Surface Antibody|HBV DNA 
+Hepatitis  C Antibody|Hepatitis C Virus RNA|HCV Genotype|Hepatitis B Surface Antigen 
+Hepatitis  C Antibody|Hepatitis C Virus RNA|Hepatitis B Surface Antigen|HBV Surface Antibody 
+Hepatitis B Surface Antigen 
+Hepatitis B Surface Antigen|HBV DNA 
+Hepatitis B Surface Antigen|HBV Surface Antibody 
+Hepatitis B Surface Antigen|HBV Surface Antibody|HBV DNA
+Hepatitis C Virus RNA|HBV Surface Antibody|HBV DNA 
+Hepatitis C Virus RNA|Hepatitis B Surface Antigen
+
+### HBV negative
+HBV Surface Antibody 
+HCV Genotype 
+Hepatitis  C Antibody 
+Hepatitis  C Antibody|HBV Core Antibody 
+Hepatitis  C Antibody|HBV Surface Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Core Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Core Antibody|HBV DNA 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV DNA 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Surface Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Surface Antibody|HBV Core Antibody 
+Hepatitis  C Antibody|Hepatitis B Surface Antigen|HBV Surface Antibody|HBV DNA
+Hepatitis  C Antibody|Hepatitis C Virus RNA|HCV Genotype 
+Hepatitis  C Antibody|Hepatitis C Virus RNA|HCV Genotype|Hepatitis B Surface Antigen
+Hepatitis  C Antibody|Hepatitis C Virus RNA|Hepatitis B Surface Antigen|HBV Surface Antibody 
+Hepatitis B Surface Antigen 
+Hepatitis B Surface Antigen|HBV Core Antibody 
+Hepatitis B Surface Antigen|HBV Core Antibody|HBV DNA 0
+Hepatitis B Surface Antigen|HBV DNA 
+Hepatitis B Surface Antigen|HBV Surface Antibody 0
+Hepatitis B Surface Antigen|HBV Surface Antibody|HBV Core Antibody 
+Hepatitis B Surface Antigen|HBV Surface Antibody|HBV Core Antibody|HBV DNA 
+Hepatitis B Surface Antigen|HBV Surface Antibody|HBV DNA 
+Hepatitis C Virus RNA 0
+Hepatitis C Virus RNA|HBV Surface Antibody|HBV DNA 
+Hepatitis C Virus RNA|HCV Genotype 
+Hepatitis C Virus RNA|HCV Genotype|Hepatitis B Surface Antigen|HBV Surface Antibody|HBV Core Antibody 0
+Hepatitis C Virus RNA|Hepatitis B Surface Antigen 
+Hepatitis C Virus RNA|Hepatitis B Surface Antigen|HBV Core Antibody 
+Hepatitis C Virus RNA|Hepatitis B Surface Antigen|HBV Core Antibody|HBV DNA
+Hepatitis C Virus RNA|Hepatitis B Surface Antigen|HBV Surface Antibody|HBV Core Antibody 
+
+table(HCC_clinic3$HBV)
+TRUE
+175
+
+table(HCC_clinic3$HCV)
+TRUE 
+144 
+
+
+#nodes_pathologic
+colnames(HCC_clinic3)[10] = 'nodes_pathologic'
+table(HCC_clinic3$nodes_pathologic)
+HCC_clinic3$nodes_pathologic = gsub('N0', 0,HCC_clinic3$nodes_pathologic)
+HCC_clinic3$nodes_pathologic = gsub('N1', 1,HCC_clinic3$nodes_pathologic)
+HCC_clinic3$nodes_pathologic = gsub('[Not Available]','NX',HCC_clinic3$nodes_pathologic)
+HCC_clinic3$nodes_pathologic[HCC_clinic3$nodes_pathologic =='[NXNXNXNXNXNXNXNXNXNXNXNXNX]'] = 'NX'
+
+HCC_clinic3$nodes_pathologic = as.factor(HCC_clinic3$nodes_pathologic)
+
+#wrap up the data parsing
+save(HCC_clinic3, file='HCC_clinic3_2021.06.06.rda')
+
+#normalization
+norm_minmax <- function(x){(x- min(x)) /(max(x)-min(x))}
+HCC_clinic4 = HCC_clinic3
+HCC_clinic4$tumor_pathologic = norm_minmax(HCC_clinic3$tumor_pathologic)
+HCC_clinic4$tumor_stage = norm_minmax(HCC_clinic3$tumor_stage)
+HCC_clinic4$age_at_diagnosis = norm_minmax(HCC_clinic3$age_at_diagnosis)
+
+
+save(HCC_clinic4, file='HCC_clinic4_2021.06.10.rda')
+
+table(substr(HCC_clinic4$sample,start=14,stop=15))
+HCC_clinic_tumor = HCC_clinic4[substr(HCC_clinic4$sample,start=14,stop=15) == '01' | substr(HCC_clinic4$sample,start=14,stop=15) == '02',]
+HCC_clinic_normal = HCC_clinic4[substr(HCC_clinic4$sample,start=14,stop=15) == '11',]
+
+table(HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == FALSE)
+table(HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == FALSE)
+table(HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == TRUE)
+table(HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == TRUE)
+
+table(HCC_clinic_tumor[HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == FALSE,]$gender == 'MALE')
+table(HCC_clinic_tumor[HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == FALSE,]$gender == 'MALE')
+table(HCC_clinic_tumor[HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == TRUE,]$gender == 'MALE')
+table(HCC_clinic_tumor[HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == TRUE,]$gender == 'MALE')
+
+HCC_noH = HCC_clinic_tumor[HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == FALSE,] 
+HCC_HBV = HCC_clinic_tumor[HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == FALSE,]
+HCC_HCV = HCC_clinic_tumor[HCC_clinic_tumor$HBV == FALSE & HCC_clinic_tumor$HCV == TRUE,]
+HCC_both = HCC_clinic_tumor[HCC_clinic_tumor$HBV == TRUE & HCC_clinic_tumor$HCV == TRUE,]
+
+
+### propensity score algorithm ###
+1. load library and check data
 library("MatchIt")
-
-colnames(clinic_process) =c('case', 'patient_code', 'age', 'sex', 'neoplasm_stage', 'tumor_stage', 'status', 'race', 'metastatis_stage')
+colnames(HCC_noH)
 
 2. Check initial imbalance
 # No matching; constructing a pre-match matchit object
-m.out0 <- matchit(sex ~ age + neoplasm_stage + tumor_stage +status + race + metastatis_stage, data = clinic_process, method = NULL, distance = "glm")
+m.noH_non <- matchit(gender ~ race+tumor_pathologic+nodes_pathologic+metastasis_pathologic+tumor_stage+age_at_diagnosis+HBV+HCV+alcohol, data = HCC_noH, method = NULL, distance = "glm")
 
 # Checking balance prior to matching
 summary(m.out0)
 
-3. Matching
-# 1:1 NN PS matching w/o replacement
-m.out1 <- matchit(sex ~ age + neoplasm_stage + tumor_stage +status + race + metastatis_stage, data = clinic_process, method = "nearest", distance = "glm")
+3. Matching with weight
+##start
+m.noH <- matchit(gender ~ race+tumor_pathologic+nodes_pathologic+metastasis_pathologic+tumor_stage+age_at_diagnosis+HBV+HCV+alcohol, data = HCC_noH, method = "full", distance = "glm", link = "probit", caliper = 0.2, estimand = "ATE")
 
-m.out1 <- matchit(sex ~ age   +status + race + metastatis_stage, data = clinic_process, method = "nearest", distance = "glm")
+##weight
+m.noH <- matchit(gender ~ race+tumor_pathologic+nodes_pathologic+metastasis_pathologic+tumor_stage+age_at_diagnosis+HBV+HCV+alcohol, data = HCC_noH, method = "full", distance = "glm", link = "probit", caliper = 0.2, estimand = "ATE", s.weights = m.noH$weights)
+m.noH
+plot(summary(m.noH))
 
-m.out1
+save(m.noH, file='m.noH_2021.06.10.rda')
 
 4. Assessing the quality of matches
 # Checking balance after NN matching
-summary(m.out1, un = FALSE)
-##n = FALSE to suppress display of the balance before matching for brevity and because we already saw it.
+summary(m.noH)
+    ##check std.mean diff. < 0.1
 
 #visualize the distribution of propensity scores - jitter plot
-plot(m.out1, type = "jitter", interactive = FALSE)
+plot(m.noH, type = "jitter", interactive = FALSE)
 
 #visualize the distribution of propensity scores - jitter plot - QQ plot
 plot(m.out1, type = "qq", interactive = FALSE,
      which.xs = c("neoplasm_stage", "tumor_stage", 'race'))
 plot(summary(m.out1))
 
-5. Trying a different matching specification
-# Full matching on a probit PS
-m.out2 <- matchit(sex ~ age + race + tumor_stage + metastatis_stage + neoplasm_stage, data = clinic_process, method = "full", distance = "glm", link = "probit")
-m.out2
+
+#visualization
+reference:https://cran.r-project.org/web/packages/MatchIt/vignettes/assessing-balance.html#plot.matchit
+library(cobalt)
+
+unadjust.match =  matchit(sex ~ age + race + tumor_stage + metastatis_stage + neoplasm_stage, data = tumorFree_noHepatitis, method = NULL , distance = "glm", link = "probit", caliper = 0.2, estimand = "ATE")
+
+
+##visualization option
+match_for_visualization = m.noH_non
+match_for_visualization = m.noH
+#which = "unadjusted"
+which = 'adjusted'
+
+##visualizae
+love.plot(match_for_visualization, binary = "std")
+bal.plot(match_for_visualization, var.name = "age", which = which)
+bal.plot(match_for_visualization, var.name = "neoplasm_stage", which = which)
+bal.plot(match_for_visualization, var.name = "metastatis_stage", which = which)
+bal.plot(match_for_visualization, var.name = "tumor_stage", which = which)
+bal.plot(match_for_visualization, var.name = "race", which = which)
+bal.plot(match_for_visualization, var.name = "distance", which = which,
+         type = "histogram", mirror = TRUE)
+
+m.noH.data <- match.data(m.noH)
+m.noH.data = m.noH.data[m.noH.data$weights != 0,]
+save(m.noH.data, file='m.noH.data_2021.06.10.rda')
 
 # Checking balance after full matching
 summary(m.out2, un = FALSE)
 
 plot(m.out2, type = "qq", interactive = FALSE, which.xs = c("age","metastatis_stage", "neoplasm_stage", "tumor_stage", 'race'))
-
-
-
-# Love plot : summarize balance visually
-plot(summary(m.out2))
 
 
 6. Estimating the Treatment effects
@@ -134,126 +346,10 @@ head(m.data2)
 library("lmtest") #coeftest
 library("sandwich") #vcovCL
 
-fit1 <- lm(sex ~ age   +status + race + metastatis_stage, data = clinic_process, weights = m.data2$weights)
+fit1 <- lm(sex ~ age   +status + race + metastatis_stage, data = HCC_clinic3, weights = m.data2$weights)
 coeftest(fit1, vcov. = vcovCL, cluster = ~subclass)
 
 m.data2 <- match.data(m.out2)
 fit2 <- lm(re78 ~ treat + age + educ + race + married + nodegree + re74 + re75, data = m.data2, weights = weights)
 coeftest(fit2, vcov. = vcovCL, cluster = ~subclass)
 
-save(weight_vector, file='weight_vector.rda')
-
-
-###moditifcation (normalization of clinic data) ###
-normalized_clinic_process = clinic_process
-
-#normalization function
-norm_minmax <- function(x){(x- min(x)) /(max(x)-min(x))}
-
-#convert tumor_stage
-table(normalized_clinic_process$tumor_stage)
-is.na(normalized_clinic_process$tumor_stage)
-normalized_clinic_process$tumor_stage = as.character(normalized_clinic_process$tumor_stage)
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='T0'] = 0
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='T1'] = 1
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='T2'] = 2
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='T3'] = 3
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='T4'] = 4
-normalized_clinic_process$tumor_stage[normalized_clinic_process$tumor_stage=='TX'] = 1 #fill with the most frequent value
-normalized_clinic_process$tumor_stage = as.integer(normalized_clinic_process$tumor_stage)
-normalized_clinic_process$tumor_stage = norm_minmax(normalized_clinic_process$tumor_stage )
-
-#neoplasm_stage
-table(normalized_clinic_process$neoplasm_stage)
-normalized_clinic_process$neoplasm_stage= as.character(normalized_clinic_process$neoplasm_stage)
-normalized_clinic_process$neoplasm_stage[normalized_clinic_process$neoplasm_stage=='STAGE I'] = 1
-normalized_clinic_process$neoplasm_stage[normalized_clinic_process$neoplasm_stage=='STAGE II'] = 2
-normalized_clinic_process$neoplasm_stage[normalized_clinic_process$neoplasm_stage=='STAGE III'] = 3
-normalized_clinic_process$neoplasm_stage[normalized_clinic_process$neoplasm_stage=='STAGE IV'] = 4
-normalized_clinic_process$neoplasm_stage = as.integer(normalized_clinic_process$neoplasm_stage)
-normalized_clinic_process$neoplasm_stage = norm_minmax(normalized_clinic_process$neoplasm_stage)
-# metastatis_stage : leave it as it is
-table(normalized_clinic_process$metastatis_stage)
-
-# age
-summary(normalized_clinic_process$age)
-unique(is.na(normalized_clinic_process$age)) #check na value
-normalized_clinic_process$age = norm_minmax(normalized_clinic_process$age)
-
-#save data
-save(clinic_process, normalized_clinic_process, file='clinic_normalized.rda')
-
-# Propensity algorithm
-m.normalized <- matchit(sex ~ age + race + tumor_stage + metastatis_stage + neoplasm_stage + status, data = normalized_clinic_process, method = "full", distance = "glm", link = "probit", estimand = "ATE", s.weights = ~SW)
-m.normalized
-
-# Checking balance after full matching
-summary(m.normalized, un = FALSE)
-plot(m.normalized, type = "qq", interactive = FALSE, which.xs = c("age","metastatis_stage", "neoplasm_stage", "tumor_stage", 'race', 'status')) ##QQ plot
-plot(summary(m.normalized)) #Love plot
-
-#output
-m.normalized.data <- match.data(m.normalized)
-save(m.normalized.data, file='m.normalized_weight.rda')
-
-rm(m.normalized, m.normalized.data)
-
-
-### divide clinic data into two group. (tumor and normal type) ### 2021.04.26
-tumorFree_normalized = normalized_clinic_process[clinic_process$status == 'Tumor Free',]
-tumor_normalized = normalized_clinic_process[clinic_process$status == 'With Tumor',]
-
-# Propensity algorithm - tumor
-m.tumor.normalized <- matchit(sex ~ age + race + tumor_stage + metastatis_stage + neoplasm_stage, data = tumor_normalized, method = "full", distance = "glm", link = "probit", caliper = 0.3, estimand = "ATE")
-m.tumor.normalized
-
-# Checking balance after full matching - tumor
-summary(m.tumor.normalized, un = FALSE)
-plot(m.tumor.normalized, type = "qq", interactive = FALSE, which.xs = c("age","metastatis_stage", "neoplasm_stage", "tumor_stage", 'race')) ##QQ plot
-plot(summary(m.tumor.normalized)) #Love plot
-
-# Propensity algorithm - tumor Free
-m.tumorFree.normalized <- matchit(sex ~ age + race + tumor_stage + metastatis_stage + neoplasm_stage, data = tumorFree_normalized, method = "full", distance = "glm", link = "probit", caliper = 0.3, estimand = "ATE")
-m.tumor.normalized
-
-# Checking balance after full matching - tumor Free
-summary(m.tumorFree.normalized, un = FALSE)
-plot(m.tumorFree.normalized, type = "qq", interactive = FALSE, which.xs = c("age","metastatis_stage", "neoplasm_stage", "tumor_stage", 'race')) ##QQ plot
-plot(summary(m.tumorFree.normalized)) #Love plot
-
-#output
-m.tumor.normalized.data <- match.data(m.tumor.normalized)
-m.tumorFree.normalized.data <- match.data(m.tumorFree.normalized)
-save(m.tumor.normalized.data, m.tumorFree.normalized.data, file='propensity_result_2021.04.26.rda')
-
-rm(m.tumor.normalized.data, m.tumorFree.normalized.data)
-
-#purity
-clinic_purity = read_tsv('../data/TCGA_mastercalls.abs_tables_JSedit.fixed-purity.txt')
-table(clinic_process$case %in% clinic_purity$array)
-save(clinic_purity, file= 'PanCan-tumor purity.rda')
-
-#clinic data - virus infection
-clinic_PanCan = read_tsv('../data/lihc_tcga_pan_can_atlas_2018_clinical_data.tsv')
-clinic_LIHC = read_tsv('../../../Resources/TCGA-Assembler-2-master/TCGA-Assembler/BiospecimenClinicalData/nationwidechildrens.org_clinical_patient_lihc.txt') 
-
-table(clinic_process$patient_code %in% clinic_LIHC$bcr_patient_barcode)
-
-table(clinic_LIHC$history_hepato_carcinoma_risk_factors)
-clinic_hepatitis = select(clinic_LIHC,bcr_patient_barcode, history_hepato_carcinoma_risk_factors)
-table(clinic_hepatitis$history_hepato_carcinoma_risk_factors)
-
-##data pre-processing
-colnames(clinic_hepatitis) = c('patient_barcode', 'hepatitis') 
-table(clinic_hepatitis$hepatitis)
-clinic_hepatitis$hepatitis[clinic_hepatitis$hepatitis == 'Hepatitis C|Hemochromatosis'] = 'Hepatitis C'
-clinic_hepatitis$hepatitis[clinic_hepatitis$hepatitis == 'Alcohol consumption|Hepatitis B'] = 'Hepatitis B'
-clinic_hepatitis$hepatitis[clinic_hepatitis$hepatitis == 'Hepatitis B|Hepatitis C'] = 'both'
-clinic_hepatitis$hepatitis[clinic_hepatitis$hepatitis == '[Not Available]'] = NA
-clinic_hepatitis_selected = clinic_hepatitis[clinic_hepatitis$patient_barcode %in% clinic_process$patient_code,]
-table(clinic_hepatitis_selected$hepatitis)
-both Hepatitis B Hepatitis C 
-7          95          48
-save(clinic_hepatitis_selected, file='clinic_hepatitis_selected.rda')
-
-clinic_process = left_join(x=clinic_process, y=clinic_hepatitis, by = c('patient_code' ='bcr_patient_barcode'))
