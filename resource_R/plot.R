@@ -48,7 +48,16 @@ df = data.frame(
 ggplot(data=df, aes(x=nprc, y=speedup, group=method)) +
     geom_line(aes(color=method)) +
     geom_point(aes(shape=method, color=method), size=2)
-    
+
+# histogram
+## ref : http://www.cookbook-r.com/Graphs/Plotting_distributions_(ggplot2)/
+plot_data = data.frame(gene_score_anno[,c("score_normalized")])
+colnames(plot_data) = 'timestamp'
+ggplot(plot_data, aes(x=timestamp)) +
+  geom_histogram(binwidth=.5, colour="black", fill="white") +
+  geom_vline(aes(xintercept=mean(timestamp, na.rm=T)),   # Ignore NA values for mean
+             color="red", linetype="dashed", size=1)
+
 #scatter plot
 ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_normal < 0.05)) +
     geom_point(size=2, shape=16) +
