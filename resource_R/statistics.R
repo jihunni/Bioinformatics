@@ -2,6 +2,11 @@
 mean()
 median()
 sd()
+## mode ()
+get_mode = gene_score_anno$score_MinMaxNormalized
+get_mode = unlist(lapply(get_mode, function(x) round(x, 3)))
+get_mode = table(get_mode)
+get_mode = as.numeric(names(get_mode)[which(get_mode==max(get_mode))])
 
 ## summary of dataframe (tidyverse)
 base 참고
