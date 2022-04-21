@@ -13,6 +13,10 @@
 - downstream scientific analysis
 
 # concepts for genomics
+## genetic variance
+- intra-species genetic variance (human) : 0.08% (2M ~ 3M bp)
+- inter-species genetic variance (between human and chip) : 0.2%
+
 ## DNA lesion
 - mutation : a change in the sequence of base pair.
 - DNA lesion : an abnormal chemical structure in DNA. a section of a DNA molecule containing a primary damaged site i.e. a base alteration, a base deletion, a sugar alteration or a strand break. Replication before repair, or inefficient repair, can result in the fixation of a primary lesion as a permanent mutation.
