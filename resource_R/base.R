@@ -224,6 +224,15 @@ data.frame(mapply('*',df,v))
 df_filter = df[rowSums(df) != 0,]
 df_filter = df[rowSums(df) > 5,]
 
+#sort
+data.frame[order(vector / df$colnames),] #sort row
+
+#correlation
+matrix = cor(correlation_prepared_data.frame, "complete.obs") 
+    row : gene
+    column : sampple
+    "complete.obs" : without NA           
+           
 <matrix>
 #the number of column and row
 nrow(vector, array, dataframe, matrix)
@@ -274,12 +283,16 @@ lapply(files, function(x) {
   # 3. Close the file
   dev.off()
 })
-                      
-#sort
-data.frame[order(vector / df$colnames),] #sort row
 
-#correlation
-matrix = cor(correlation_prepared_data.frame, "complete.obs") 
-    row : gene
-    column : sampple
-    "complete.obs" : without NA
+# To creaste a proejct folder in working space
+  folder <- paste0('TCGA-', project_name)
+  if (file.exists(folder)) {
+    cat("The folder already exists")
+  } 
+  else {
+    dir.create(folder)
+  }
+          
+           
+           
+
