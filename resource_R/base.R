@@ -92,7 +92,9 @@ data.frame$col = lapply(data.frame$col, function(x){
 }) # to change a special character '|' ino non-special char '/'
 
 \^$.?*|+()[ : special character in R
-                        
+
+list = strsplit(data.frame$column, 'string')  #convert dataframe into list            
+list = strsplit(data.frame$column, '[.]')  #convert dataframe by dlim '.' into list            
 <vector>
 #random samples
 e.g. sample(x=1:30, size = 5)
