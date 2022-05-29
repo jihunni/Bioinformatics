@@ -63,6 +63,7 @@ ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_nor
     geom_point(size=2, shape=16) +
     scale_color_manual(values=c('green','red')) #color selection per group
 #boxplot
+library(ggsignif)
 plot_df = data.frame(score=x, target=y)
   button10 =  dplyr::top_n(plot_df, -dim(plot_df)[1]*0.1,target) #lowest
   button10['group'] = 'button'
