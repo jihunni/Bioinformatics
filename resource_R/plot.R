@@ -54,9 +54,12 @@ ggplot(data=df, aes(x=nprc, y=speedup, group=method)) +
 plot_data = data.frame(gene_score_anno[,c("score_normalized")])
 colnames(plot_data) = 'timestamp'
 ggplot(plot_data, aes(x=timestamp)) +
-  geom_histogram(binwidth=.5, colour="black", fill="white") +
+  geom_histogram(bins = 30, binwidth=.5, colour="black", fill="white") +
   geom_vline(aes(xintercept=mean(timestamp, na.rm=T)),   # Ignore NA values for mean
-             color="red", linetype="dashed", size=1)
+             color="red", linetype="dashed", size=1) +
+  xlim(c(0, 200000)) +
+  ylim(c(0, 200)) +
+  ggtitle("Random permutation model (n=1000)")
 
 #scatter plot
 ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_normal < 0.05)) +
