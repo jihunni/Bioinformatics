@@ -59,6 +59,7 @@ ggplot(plot_data, aes(x=timestamp)) +
              color="red", linetype="dashed", size=1) +
   xlim(c(0, 200000)) +
   ylim(c(0, 200)) +
+  labs(x='Total flux', y='count') +
   ggtitle("Random permutation model (n=1000)")
 
 #scatter plot
