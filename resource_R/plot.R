@@ -106,6 +106,15 @@ ggplot(plot_data.frame, aes(x=col_name1, y= col_name2)) +
     geom_hline(yintercept=0, size=.1) +
     geom_vline(xintercept=0, size=.1)
 
+# Percent stacked barchart
+Ref : https://r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html
+level_order = RXN_ecdf_Top95per_reduced_HMR_subsystem$SUBSYSTEM[order(RXN_ecdf_Top95per_reduced_HMR_subsystem$threshold_no_per)] # to sort y-axis in ggplot
+plot_data$subsystem = factor(plot_data$subsystem, levels = level_order)
+ggplot(plot_data, aes(fill=threshold, y= subsystem, x= count)) + 
+  geom_bar(position="fill", stat="identity") +
+  ggtitle("subsystem eCDF value of cancer evolution model (TOP 95% of random permutation model)")  +
+  labs(x='Probability', y='Subsystem', color="eCDF >= 0.95")
+
 #additional thing
 sp + labs(x='xlab', y='ylab', color="color-level legend name")
 sp + ggtitle("graph title")
