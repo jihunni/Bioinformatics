@@ -76,6 +76,10 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 ```
 
 # STAR alignment
+## To select the alignment tool
+Ref: https://bioinformatics.stackexchange.com/questions/19540/star-vs-bowtie2  
+- STAR : mapping short reads **with** splicing  
+- Bowtie2 : mapping short reads **without** splicing  
 ## STAR index
 ```
 nohup STAR --runMode genomeGenerate \
