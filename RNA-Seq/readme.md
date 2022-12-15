@@ -45,7 +45,7 @@ do
 done
 ```
 
-# fastQC : quality check
+## fastQC : quality check
 - phred 33 (new) vs phred 64 (new)
   ```
   # phred 33 encoded
@@ -70,7 +70,7 @@ $ sudo ln -s /path/to/FastQC/fastqc /usr/local/bin/fastqc
 ![image](https://user-images.githubusercontent.com/48517782/129911884-3501a837-0bde-44fa-a43d-85ca247bbd15.png)
 ![image](https://user-images.githubusercontent.com/48517782/129912021-e18119ee-7a31-40e4-90f6-92537a25e55c.png)
 
-# cudadapt [link](https://cutadapt.readthedocs.io/en/stable/guide.html#quality-trimming)
+## cudadapt [link](https://cutadapt.readthedocs.io/en/stable/guide.html#quality-trimming)
 ```
 $ cutadapt -q 10 -o output.fastq input.fastq
 ```
@@ -80,6 +80,16 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 Ref: https://bioinformatics.stackexchange.com/questions/19540/star-vs-bowtie2  
 - STAR : mapping short reads **with** splicing  
 - Bowtie2 : mapping short reads **without** splicing  
+## Genome selection
+Ref: https://bioinformatics.stackexchange.com/questions/540/what-ensembl-genome-version-should-i-use-for-alignments-e-g-toplevel-fa-vs-p
+- masking
+	- dna_sm: Repeats soft-masked (converts repeat nucleotides to lowercase)
+	- dna_rm: Repeats masked (converts repeats to to N's)
+	- dna: No masking
+- toplevel vs primary assembly
+	- toplevel: Includes haplotype information 
+	- primary_assembly: Single reference base per position
+- RNAseq (STAR alignment) : dna_sm, toplevel 
 ## STAR index
 ```
 nohup STAR --runMode genomeGenerate \
