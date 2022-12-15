@@ -80,6 +80,17 @@ $ cutadapt -q 10 -o output.fastq input.fastq
 Ref: https://bioinformatics.stackexchange.com/questions/19540/star-vs-bowtie2  
 - STAR : mapping short reads **with** splicing  
 - Bowtie2 : mapping short reads **without** splicing  
+
+## non-stranded vs stranded RNAseq (better)
+REf : https://www.biostars.org/p/61884/  
+- Non-stranded RNA-Seq : you can’t tell whether a sequencing read represents the plus or minus strand of the DNA template.
+	![image](https://user-images.githubusercontent.com/48517782/207800565-bf7253eb-5c9c-4024-b51c-d014f90952b7.png)   
+	Non-stranded library preparation of two antisense transcripts from the same gene. Information about strand orientation is not preserved during cDNA synthesis. As a result, the sequencing products are identical for the two mRNA molecules, and it's not possible to determine the directionality of the original transcript directly from the sequencing data.
+- stranded RNA-Seq : can distinguishes the first and second strands of cDNA. There are several ways to do this, but, in general, the process is more complicated than non-stranded library prep1. One popular method uses dUTP to label the second strand with uracil instead of thymine (see figure below). After adapter ligation, amplification of the second strand is blocked. This can be accomplished by performing uracil-specific digestion before amplification or by using a DNA polymerase that is unable to amplify uracil-containing templates. As a result, all sequencing products from a particular RNA molecule will have the same orientation between the Read 1 and Read 2 primer binding sites, enabling you to determine the orientation of the transcript.
+[image](https://user-images.githubusercontent.com/48517782/207800884-e83ed788-21a7-476a-94e5-b744332353ec.png)   
+Stranded library preparation using uracil to label the second strand of cDNA. A transcript representing the plus-strand sequence is shown. Amplification of the second strand can be blocked by selective digestion with uracil-DNA glycosylase or by employing a DNA polymerase that can't use uracil as a template, such as Phusion®. The resulting sequencing product has  
+- e.g. if you have a look at the BDNF locus in humans (UCSC hg19 genome browser coordinates chr11:27,671,365-27,684,616) you will see that there is (in the "middle") a region which has overlapping exons of the BDNF protein-coding gene on the (-) strand and BDNF-AS regulatory RNA on the (+) strand. With unstranded sequencing, where you have reads mapping to that area, you would have no idea which of the two transcripts was being upregulated - the mRNA or the ncRNA, and this would obviously affect what you think is happening at the biological level.
+
 ## Genome selection
 Ref: https://bioinformatics.stackexchange.com/questions/540/what-ensembl-genome-version-should-i-use-for-alignments-e-g-toplevel-fa-vs-p
 - masking
