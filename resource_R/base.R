@@ -145,6 +145,9 @@ merged_df = merge(dataframe1, dataframe2, by=0) #merge data according to row nae
 # drop a row with NA
 new.data.frame = na.omit(data.frame)
 
+# drop a row whose sum is zero
+table_without_RowSumZero = table[apply(table, 1, function(x) !all(x==0)),] 
+           
 #change name of column
 rename.variable(df, old name of column, new name of column)
 e.g. iris <- rename.variable(iris, "Species", "especes")
