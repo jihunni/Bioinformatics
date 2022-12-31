@@ -196,7 +196,7 @@ Ref: https://pachterlab.github.io/kallisto/manual
 $ kallisto index -i homo_sapiens_index /group/bioinforamtics.2021/reference/homo_sapiens/Homo_sapiens.GRCh38.cdna.all.fa
 ```
 ```
-$  kallisto quant -i homo_sapiens_index -o output_kallisto quiz_1.cutadapt.fastq quiz_2.cutadapt.fa 
+$  kallisto quant -i homo_sapiens_index -o output_kallisto quiz_1.cutadapt.fastq quiz_2.cutadapt.fa --threads 8
 ```
 
 # Reference
