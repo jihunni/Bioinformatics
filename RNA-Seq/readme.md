@@ -191,6 +191,7 @@ Output example:
 # RSME
 
 # kallisto
+Ref: https://pachterlab.github.io/kallisto/manual
 ```
 $ kallisto index -i homo_sapiens_index /group/bioinforamtics.2021/reference/homo_sapiens/Homo_sapiens.GRCh38.cdna.all.fa
 ```
