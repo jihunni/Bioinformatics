@@ -48,3 +48,7 @@ Figure. Scientific output using PCAWG data, in bite-size chunks
   - 91% of tumours had at least one identified driver mutation, with an average of 4.6 drivers per tumour identified, showing extensive ariation across cancer types.
   - For coding point mutations, the average was 2.6 drivers per tumour.
   - Only 13% of driver point mutations were non-coding in PCAWG. Nonetheless, 25% of PCAWG tumours bear at last one putative non-coding driver point mutation, and one third affected the TERT promotoer (9% of PCAWG tumours). Overall, non-coding driver point mutations are less frequent than coding driver mutations.
+
+# Gene annotation
+## Gene Ontology (GO)
+Ref : https://www.nature.com/articles/ng0500_25
