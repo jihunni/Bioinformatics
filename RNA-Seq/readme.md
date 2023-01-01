@@ -147,6 +147,8 @@ $ /home/bioinfo20165164/program/STAR-2.7.8a/source/STAR --runThreadN 8 \
 The output of STAR alignment:   
 ![image](https://user-images.githubusercontent.com/48517782/130388366-bc5be085-dc5e-420f-9952-6407969117bd.png)
 
+The output result interpretation:  
+Ref: https://chipster.rahtiapp.fi/manual/aligners-comparison.html
 
 ## samtools index
 - Indexing a genome sorted BAM file allows one to quickly extract alignments overlapping particular genomic regions. Moreover, indexing is required by genome viewers such as IGV so that the viewers can quickly display alignments in each genomic region to which you navigate.
@@ -187,6 +189,8 @@ $ python -m HTSeq.scripts.count [options] <alignment_files> <gff_file>
 Output example:
 ![image](https://user-images.githubusercontent.com/48517782/129913899-9194a047-bd5b-48aa-a092-319ba818c767.png)
 ![image](https://user-images.githubusercontent.com/48517782/129913932-57d2db3c-36a8-4225-b6b4-81e10bbcb3b1.png)
+
+
 
 # RSME
 
