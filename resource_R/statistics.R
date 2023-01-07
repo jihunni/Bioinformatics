@@ -45,6 +45,8 @@ table(is.na(pathway_matrix)) #check NA
 pathway_matrix = as.matrix(pathway_matrix) #convert dataframe into matrix
 pathway_matrix_zscore = (pathway_matrix - mean(pathway_matrix))/sd(pathway_matrix) # transform into z-score
 
+# Min-max normalization
+distribution = (distribution - min(distribution)) / (max(distribution) - min(distribution)) #normalization                         
 # Goodness of fit test : Kolmogorov–Smirnov test
 # ref: https://www.r-bloggers.com/2015/01/goodness-of-fit-test-in-r/
 ks_test = ks.test(y_1, y_2) # y_1 and y_2 are probability density
