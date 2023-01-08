@@ -67,11 +67,11 @@ apply(data.frame, 2, median) #median by column
 
 # Statistical Test
 ## non-parametric test
-- Wilcoxon rank sum test
+### Wilcoxon rank sum test
 Ref (Youtube, concept): https://www.youtube.com/watch?v=la_M-OJvmI8&ab_channel=JaradNiemi  
 Ref (R-code) : http://www.sthda.com/english/wiki/unpaired-two-samples-wilcoxon-test-in-r  
-```
+
 wilcox.test(x, y, alternative = "two.sided")
 > x,y: numeric vectors
 > alternative: the alternative hypothesis. Allowed value is one of “two.sided” (default), “greater” or “less”.
-```
+
