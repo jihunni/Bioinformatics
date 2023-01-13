@@ -19,3 +19,4 @@ merge_fimo_tsv_result.sh
 merge_fimo_xml_result.sh
 merge_fimo_gff_result.sh
 ```
+gff -[manual conversion]-> bed  -[bedops]-> processed bed files
