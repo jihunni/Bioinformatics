@@ -8,6 +8,7 @@
 - Genbank : 16S
 - NCBI RefSeq : reference genome
 	- To download reference bacterial genome, 
+		- Download `assembly_summary_refseq.txt` from NCBI database: [Download link](https://ftp.ncbi.nlm.nih.gov/genomes/refseq/assembly_summary_refseq.txt)
 		- https://github.com/jihunni/Bioinformatics/blob/main/metagenomics/RefSeq_ftp_download_prep.R
 		- https://github.com/jihunni/Bioinformatics/blob/main/metagenomics/RefSeq_ftp_download.sh
 - EMBL-EBI
