@@ -1,0 +1,285 @@
+
+//
+AC  M03891
+XX
+ID  V$TTF1_Q5_01
+XX
+DT  30.04.2013 (created); mkl.
+DT  06.05.2013 (updated); mkl.
+CO  Copyright (C), Biobase GmbH.
+XX
+NA  TTF-1
+XX
+TY  specific
+XX
+OS  Vertebrata
+OC  Eukaryota; Metazoa; Chordata; Craniata; Vertebrata
+XX
+CL  HOX; HOX-CNCTTGAS
+XX
+BF  T05372; TTF-1; Species: baboon, Papio hamadryas; site(s) included: yes.
+BF  T01518; TTF-1; Species: cattle, Bos taurus; site(s) included: no.
+BF  T04271; TTF-1; Species: chick, Gallus gallus; site(s) included: no.
+BF  T15523; TTF-1; Species: chick, Gallus gallus; site(s) included: no.
+BF  T02098; TTF-1; Species: dog, Canis familiaris (Canis canis); site(s) included: no.
+BF  T17198; TTF-1; Species: dog, Canis familiaris (Canis canis); site(s) included: no.
+BF  T00857; TTF-1; Species: human, Homo sapiens; site(s) included: yes.
+BF  T10505; TTF-1; Species: Mammalia; site(s) included: no.
+BF  T00859; TTF-1; Species: mouse, Mus musculus; site(s) included: yes.
+BF  T10215; TTF-1; Species: mouse, Mus musculus; site(s) included: yes.
+BF  T00856; TTF-1; Species: rat, Rattus norvegicus; site(s) included: yes.
+BF  T10209; TTF-1; Species: rat, Rattus norvegicus; site(s) included: yes.
+BF  T10206; TTF-1-isoform1; Species: human, Homo sapiens; site(s) included: yes.
+BF  T23794; TTF-1-isoform3; Species: human, Homo sapiens; site(s) included: no.
+XX
+P0      A      C      G      T
+01      0     77      0      0      C
+02      0      0      0     77      T
+03      2      5     14     56      T
+04     10     11     55      1      G
+05     43      8     19      7      A
+06      8     23     37      7      S
+07     22     12     17     24      N
+XX
+BA  77 sequences (matrix compiled from individual genomic sites)
+XX
+BS  CTTGAGT; R01879; 4; 7;; n.
+BS  CTTGAGT; R01880; 5; 7;; n.
+BS  CTTGACT; R01882; 4; 7;; n.
+BS  CTTCATA; R02471; 11; 7;; p.
+BS  CTTTGTT; R04318; 14; 7;; p.
+BS  CTTGGCA; R04319; 11; 7;; p.
+BS  CTTGGCA; R04320; 7; 7;; p.
+BS  CTTGAGT; R04322; 2; 7;; p.
+BS  CTGGAGG; R04657; 6; 7;; p.
+BS  CTTGTGA; R05014; 9; 7;; p.
+BS  CTGGAGG; R12974; 10; 7;; p.
+BS  CTGGAGA; R12975; 19; 7;; n.
+BS  CTTCACT; R12977; 7; 7;; n.
+BS  CTGGAGG; R12979; 6; 7;; p.
+BS  CTTCAGA; R12981; 16; 7;; p.
+BS  CTTGCCC; R13138; 6; 7;; p.
+BS  CTTGAGA; R13139; 15; 7;; n.
+BS  CTTGAGC; R13140; 7; 7;; n.
+BS  CTTGGCC; R13142; 3; 7;; n.
+BS  CTTGGGG; R13143; 13; 7;; p.
+BS  CTTGAGG; R13152; 8; 7;; n.
+BS  CTTAGAA; R13153; -1; 7;; n.
+BS  CTTAACA; R13154; 16; 7;; n.
+BS  CTTCAGA; R13155; 10; 7;; n.
+BS  CTTGAGT; R13174; 10; 7;; n.
+BS  CTGACCT; R13188; 15; 7;; p.
+BS  CTTGAGG; R13190; 8; 7;; n.
+BS  CTTGAGG; R13192; 8; 7;; n.
+BS  CTTAGGA; R13193; 1; 7;; n.
+BS  CTACAAA; R13194; 5; 7;; n.
+BS  CTGCCCG; R13198; 5; 7;; p.
+BS  CTTGTGG; R13201; 8; 7;; p.
+BS  CTGAAnn; R13202; 2; 7;; p.
+BS  CTCCACA; R13203; 9; 7;; p.
+BS  CTTGGAA; R13204; -2; 7;; n.
+BS  CTTGACT; R13205; 2; 7;; p.
+BS  CTGGAGT; R13206; 1; 7;; p.
+BS  CTTCAGG; R13207; 1; 7;; n.
+BS  CTTGTGG; R13210; 8; 7;; p.
+BS  CTGAGGT; R13230; 3; 7;; p.
+BS  CTTGGTT; R13231; 10; 7;; n.
+BS  CTTGGTG; R13249; 9; 7;; n.
+BS  CTTGCCG; R13250; 11; 7;; p.
+BS  CTTGTCC; R13251; 8; 7;; n.
+BS  CTTGAAC; R14696; 9; 7;; p.
+BS  CTTGAAT; R16087; 5; 7;; n.
+BS  CTTGACA; R16089; 4; 7;; n.
+BS  CTGGAGT; R16563; 14; 7;; n.
+BS  CTCGAGC; R16564; 18; 7;; p.
+BS  CTCCGGC; R16579; 15; 7;; p.
+BS  CTCGAGC; R16580; 18; 7;; p.
+BS  CTCGTGT; R21192; 6; 7;; n.
+BS  CTGAGGA; R21193; 8; 7;; p.
+BS  CTAACCC; R21366; 4; 7;; n.
+BS  CTTCCTG; R21367; 4; 7;; n.
+BS  CTTGAGA; R22642; 14; 7;; p.
+BS  CTTCAGA; R22643; 12; 7;; p.
+BS  CTTGTCT; R28628; 10; 7;; n.
+BS  CTTGAAG; R28629; 14; 7;; p.
+BS  CTTGACT; R28631; 9; 7;; n.
+BS  CTTGGCC; R29600; 3; 7;; n.
+BS  CTTGAGA; R29761; 23; 7;; p.
+BS  CTTGACT; R29762; 10; 7;; n.
+BS  CTTACnn; R31311; -2; 7;; n.
+BS  CTTGACA; R32430; 4; 7;; n.
+BS  CTTGAAT; R32432; 6; 7;; n.
+BS  CTTGAAT; R32520; 6; 7;; n.
+BS  CTTGGCT; R32524; 8; 7;; p.
+BS  CTTGGTT; R32525; 8; 7;; p.
+BS  CTGGGGG; R34176; 27; 7;; p.
+BS  CTGACGC; R34177; 11; 7;; p.
+BS  CTTGGCT; R35555; 12; 7;; n.
+BS  CTTGAGA; R35556; 10; 7;; p.
+BS  CTGGTCG; R35606; 11; 7;; n.
+BS  CTTGAGT; R39565; 5; 7;; n.
+BS  CTTGGTC; R39782; 13; 7;; n.
+BS  CTTGAGA; R39894; 7; 7;; p.
+XX
+OV  M02034; V$TTF1_Q5.
+XX
+PR  vertebrate non-redundant (VNR); TTF-1 (Nkx2.1)
+PR  lung-specific profile [2] [3]
+XX
+RN  [1]; RE0076749.
+RA  TRANSFAC_Team.
+RT  New matrix entries from compiled binding sites.
+RL  TRANSFAC Reports Rel20132:0001 (2013).
+RN  [2]; RE0022271.
+RX  PUBMED: 11290504.
+RA  Costa R. H., Kalinichenko V. V., Lim L.
+RT  Transcription factors in mouse lung development and function.
+RL  Am. J. Physiol. Lung Cell. Mol. Physiol. 280:L823-38 (2001).
+RN  [3]; RE0022274.
+RX  PUBMED: 10845115.
+RA  Mendelson C. R.
+RT  Role of transcription factors in fetal lung development and surfactant protein gene expression.
+RL  Annu. Rev. Physiol. 62:875-915 (2000).
+XX
+//
+AC  M04504
+XX
+ID  V$GMEB2_04
+XX
+DT  03.05.2013 (created); mkl.
+DT  03.05.2013 (updated); mkl.
+CO  Copyright (C), Biobase GmbH.
+XX
+NA  GMEB2
+XX
+DE  dimeric
+XX
+TY  specific
+XX
+OS  human, Homo sapiens
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; primates
+XX
+CL  SAND; SAND-KKACGTMM
+XX
+BF  T27588; (gmeb2)2; Species: human, Homo sapiens; site(s) included: no.
+XX
+P0      A      C      G      T
+01     34     75    109    239      T
+02     25     10     86    239      T
+03    239      0      5      0      A
+04      4    239      0      0      C
+05      0      4    239      0      G
+06      0     21      0    239      T
+07    239     66     12      9      A
+08    239     84     24      5      A
+XX
+BA  sequences (HT-SELEX)
+XX
+CC  sequences selected with recombinant GMEB2 from a pool of double-stranded oligonucleotides containing a core of 20 random nucleotides; 4 rounds of selection and amplification
+XX
+PR  vertebrate non-redundant (VNR); GMEB
+XX
+RN  [1]; RE0076752.
+RX  PUBMED: 23332764.
+RA  Jolma A., Yan J., Whitington T., Toivonen J., Nitta K. R., Rastas P., Morgunova E., Enge M., Taipale M., Wei G., Palin K., Vaquerizas J. M., Vincentelli R., Luscombe N. M., Hughes T. R., Lemaire P., Ukkonen E., Kivioja T., Taipale J.
+RT  DNA-binding specificities of human transcription factors.
+RL  Cell 152:327-339 (2013).
+XX
+//
+AC  M04594
+XX
+ID  V$ZIC3_07
+XX
+DT  29.05.2013 (created); sla.
+DT  29.07.2013 (updated); mkl.
+CO  Copyright (C), Biobase GmbH.
+XX
+NA  Zic3
+XX
+TY  specific
+XX
+OS  mouse, Mus musculus
+OC  eukaryota; animalia; metazoa; chordata; vertebrata; tetrapoda; mammalia; eutheria; rodentia; myomorpha; muridae; murinae
+XX
+CL  ZFC2H2; ZFC2H2-CNCAGCAKG
+XX
+BF  T20329; ZIC3; Species: human, Homo sapiens; site(s) included: no.
+BF  T04671; Zic3; Species: mouse, Mus musculus; site(s) included: yes.
+XX
+P0      A      C      G      T
+01      0    209      1      2      C
+02      1    207      0      4      C
+03     17    131      1     63      C
+04     10      1    198      3      G
+05      0    212      0      0      C
+06     30      7      0    175      T
+07      0      1    211      0      G
+08     14     26    132     40      G
+09     13     25    161     13      G
+XX
+BA  212 sequences (ChIP-on-chip)
+XX
+CC  Zic3 binding motif defined from ChIP-on-chip experiment in mouse E14 ESC cells; confirmed by qPCR
+XX
+RN  [1]; RE0076150.
+RX  PUBMED: 20872845.
+RA  Lim L. S., Hong F. H., Kunarso G., Stanton L. W.
+RT  The pluripotency regulator Zic3 is a direct activator of the Nanog promoter in ESCs.
+RL  Stem Cells 28:1961-1969 (2010).
+XX
+//
+AC  M04969
+XX
+ID  P$ABI4_03
+XX
+DT  11.09.2013 (created); mkl.
+DT  11.09.2013 (updated); mkl.
+CO  Copyright (C), Biobase GmbH.
+XX
+NA  ABI4
+XX
+TY  specific
+XX
+OS  thale cress, Arabidopsis thaliana
+OC  eukaryota; viridiplantae; embryobionta; magnoliophyta; magnoliopsida; dilleniidae; capparales; brassicaceae
+XX
+BF  T02642; ABI4; Species: thale cress, Arabidopsis thaliana; site(s) included: yes.
+XX
+P0      A      C      G      T
+01    344    219    174    262      N
+02      0    407     42    549      Y
+03      0      0    999      0      G
+04      0    999      0      0      C
+05      0    999      0      0      C
+06      0      0    999      0      G
+07     17    962     20      0      C
+08      0    917      0     82      C
+09      0    300    696      2      G
+10    568    398     30      2      M
+XX
+BA  sequences (3D structure-based energy calculations)
+XX
+CC  SWISS-MODEL:A0MES8_1, target start:55, target end:110, template start:3, template end:59, identity:0.70175, PDB template:1gcc, chain:A, resolution:99.9, E-score:1.42062e-15
+XX
+RN  [1]; RE0075309.
+RX  PUBMED: 22693215.
+RA  Gabdoulline R., Eckweiler D., Kel A., Stegmaier P.
+RT  3DTF: a web server for predicting transcription factor PWMs using 3D structure-based energy calculations.
+RL  Nucleic Acids Res. 40:W180-5 (2012).
+RN  [2]; RE0072514.
+RX  PUBMED: 20438625.
+RA  Alamanova D., Stegmaier P., Kel A.
+RT  Creating PWMs of transcription factors using 3D structure-based computation of protein-DNA free binding energies.
+RL  BMC Bioinformatics 11:225 (2010).
+RN  [3]; RE0078978.
+RX  PUBMED: 18931379.
+RA  Kiefer F., Arnold K., Kunzli M., Bordoli L., Schwede T.
+RT  The SWISS-MODEL Repository and associated resources.
+RL  Nucleic Acids Res. 37:D387-92 (2009).
+RN  [4]; RE0078979.
+RX  PUBMED: 14681401.
+RA  Kopp J., Schwede T.
+RT  The SWISS-MODEL Repository of annotated three-dimensional protein structure homology models.
+RL  Nucleic Acids Res. 32:D230-4 (2004).
+XX
+//
