@@ -9,7 +9,7 @@ fimo_slurm_array.sh
 - cisml.xml
 - fimo.gff
 - fimo.html
-- fimo.tsv
+- fimo.tsv : fimo_output_tsv_example.tsv
 - fimo.xml
 
 ## To merge all fimo output files
