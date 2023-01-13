@@ -1,4 +1,8 @@
 # FIMO
+## Input
+- transfac2meme_human_6715_oneExample.txt
+- reference genome
+
 ## To run `FIMO` with multiple cores
 ```
 fimo_slurm_array.sh
