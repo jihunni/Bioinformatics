@@ -8,7 +8,7 @@
 #
 #
 #SBATCH --ntasks=1
-#SBATCH --array=0-60
+#SBATCH --array=0-60%15
 #SBATCH --cpus-per-task=1
 #SBATCH --mem 4G
 #SBATCH --time=24:00:00
