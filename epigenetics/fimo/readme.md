@@ -1,6 +1,6 @@
 # FIMO
 ## Input
-- transfac2meme_human_6715_oneExample.txt
+- matrix_excerpt.dat --[PostgreSQL database & Python manual code]--> transfac2meme_human_6715_oneExample.txt
 - reference genome
 
 ## To run `FIMO` with multiple cores
@@ -25,4 +25,4 @@ merge_fimo_xml_result.sh
 merge_fimo_gff_result.sh
   header_file.gff
 ```
-gff -[manual conversion]-> bed  -[bedops]-> processed bed files
+gff --[manual conversion]--> bed  --[bedops]--> processed bed files
