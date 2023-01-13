@@ -1,0 +1,10 @@
+1	10000	10012	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-;Alias=ZNF23;ID=V_ZNF23_02-ZNF23-4540-1;pvalue=1.38e-05;qvalue=1;sequence=GGGTTAGGGTTA;
+1	10000	10015	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-19-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
+1	10006	10018	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-;Alias=ZNF23;ID=V_ZNF23_02-ZNF23-4541-1;pvalue=1.38e-05;qvalue=1;sequence=GGGTTAGGGTTA;
+1	10006	10021	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-20-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
+1	10012	10024	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-;Alias=ZNF23;ID=V_ZNF23_02-ZNF23-4542-1;pvalue=1.38e-05;qvalue=1;sequence=GGGTTAGGGTTA;
+1	10012	10027	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-21-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
+1	10018	10030	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-;Alias=ZNF23;ID=V_ZNF23_02-ZNF23-4543-1;pvalue=1.38e-05;qvalue=1;sequence=GGGTTAGGGTTA;
+1	10018	10033	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-22-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
+1	10024	10036	.	48.6	-	fimo	nucleotide_motif	.	Name=V_ZNF23_02_1-;Alias=ZNF23;ID=V_ZNF23_02-ZNF23-4544-1;pvalue=1.38e-05;qvalue=1;sequence=GGGTTAGGGTTA;
+1	10024	10039	.	84.1	-	fimo	nucleotide_motif	.	Name=V_TRF1_01_1-;Alias=TRF1;ID=V_TRF1_01-TRF1-23-1;pvalue=3.86e-09;qvalue=0.0124;sequence=TTAGGGTTAGGGTTA;
