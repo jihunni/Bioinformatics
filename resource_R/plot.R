@@ -145,6 +145,7 @@ ggplot(data=df, aes(x=level_order, y=colName_in_df)) +
         plot.margin=unit(c(10,5,5,5),"mm"),
         strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),
         strip.text = element_text(face="bold")
+	)
 ### regression
 
 #linear regression
