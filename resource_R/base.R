@@ -80,6 +80,10 @@ LETTERS[1:5]
 #select the substring
 new string= substr(data.frame$column, start = 6, stop = 7)
 
+# concatenate a list of string into one string
+paste(list_of_string, collapse = '')
+e.g. (c('1', '2', '3'), collapse=';')
+                        
 #find and change in string
 conversion_vector = gsub("[.]","-", input_vector) #change '.' into '-'
 e.g. conversion = gsub("[.]","-", GTEx_sample_id$conversion)
