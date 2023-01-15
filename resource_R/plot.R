@@ -83,6 +83,8 @@ ggplot(boxplot_data.frame, aes(x = sex, y=value)) +
 	 ## x : categorical variable ; 
 	 ## y : numerical variable
 
+
+
 #violin plot with box plot
 ggplot(data.frame, aes(x = colname_x_in_data.frame, y=colname_y, fill=colname)) +
     geom_violin() +
@@ -100,9 +102,6 @@ ggplot(plot_data.frame, aes(x=col_name1, y= col_name2)) +
         #name_inSequence contains the element of y-axis in sequence
     ggtitle("title") +
     theme(panel.grid.major = element_line(colour="#f0f0f0"))
-
-
-
     geom_hline(yintercept=0, size=.1) +
     geom_vline(xintercept=0, size=.1)
 
@@ -128,6 +127,24 @@ ggsave(paste0("./figure/",".png"), width=25, height = 15, units='cm', limitsize 
 level_order = factor(as.numeric(df$time)) # to assign the order on x-axis
 ggplot(data=df, aes(x=level_order, y=colName_in_df)) +
 
+# theme for publication
+# REf: https://rpubs.com/Koundy/71792
+  theme_bw() +
+  theme(plot.title = element_text(face = "bold", size = rel(1.2), hjust = 0.5),
+        text = element_text(),
+        panel.background = element_rect(colour = NA),
+        plot.background = element_rect(colour = NA),
+        axis.title = element_text(face = "bold",size = rel(1)),
+        axis.title.y = element_text(angle=90,vjust =2),
+        axis.title.x = element_text(vjust = -0.2),
+        axis.text = element_text(), 
+        # axis.line = element_line(colour="black"),
+        axis.ticks = element_line(),
+        panel.grid.major = element_line(colour="#f0f0f0"),
+        panel.grid.minor = element_blank(),
+        plot.margin=unit(c(10,5,5,5),"mm"),
+        strip.background=element_rect(colour="#f0f0f0",fill="#f0f0f0"),
+        strip.text = element_text(face="bold")
 ### regression
 
 #linear regression
