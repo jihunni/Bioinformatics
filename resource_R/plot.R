@@ -127,6 +127,9 @@ ggsave(paste0("./figure/",".png"), width=25, height = 15, units='cm', limitsize 
 level_order = factor(as.numeric(df$time)) # to assign the order on x-axis
 ggplot(data=df, aes(x=level_order, y=colName_in_df)) +
 
+# color code
+Ref: https://www.statology.org/ggplot-default-colors/
+
 # theme for publication
 # REf: https://rpubs.com/Koundy/71792
   theme_bw() +
