@@ -62,6 +62,14 @@ ggplot(plot_data, aes(x=timestamp)) +
   labs(x='Total flux', y='count') +
   ggtitle("Random permutation model (n=1000)")
 
+# density plot
+ggplot() +
+  geom_density(data=plot_data_1, aes(x=data_df_1), colour="black", fill="red", alpha=0.3) +
+  geom_density(data=plot_data_2, aes(x=data_df_2), colour="black", fill="blue", alpha=0.3) +
+  geom_vline(aes(xintercept=get_mode),   # Ignore NA values for mean
+             color="red", linetype="dashed", size=1) +
+  ggtitle("title") +
+
 #scatter plot
 ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_normal < 0.05)) +
     geom_point(size=2, shape=16) +
