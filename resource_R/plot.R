@@ -64,8 +64,8 @@ ggplot(plot_data, aes(x=timestamp)) +
 
 # density plot
 ggplot() +
-  geom_density(data=plot_data_1, aes(x=data_df_1), colour="black", fill="red", alpha=0.3) +
-  geom_density(data=plot_data_2, aes(x=data_df_2), colour="black", fill="blue", alpha=0.3) +
+  geom_density(data=plot_data_1, aes(x=data_df_1), colour=rgb(209, 65, 105, maxColorValue = 255), fill=rgb(209, 65, 105, maxColorValue = 255), alpha=0.3) +
+  geom_density(data=plot_data_2, aes(x=data_df_2), colour=rgb(85, 110, 181, maxColorValue = 255), fill=rgb(85, 110, 181, maxColorValue = 255), alpha=0.3) +
   geom_vline(aes(xintercept=get_mode),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
   ggtitle("title") +
