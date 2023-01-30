@@ -91,7 +91,13 @@ ggplot(boxplot_data.frame, aes(x = sex, y=value)) +
 	 ## x : categorical variable ; 
 	 ## y : numerical variable
 
-
+# heatmap
+ggplot(data=plot_df, aes(x=timestamp, y=RXNID, fill=flux)) + # dataframe: timestamp (x-axis label), RNXID(y-axis label), flux(value)
+  geom_tile() + 
+  #scale_fill_gradientn(colors = hcl.colors(20, "bluered2"), na.value = 'black') +
+  scale_fill_gradient2(low=rgb(85, 110, 181, maxColorValue = 255), mid="white", high=rgb(209, 65, 105, maxColorValue = 255), space="Lab", guide='colourbar', na.value = 'black', aesthetics='fill') +
+  coord_fixed() +
+  ggtitle("Reaction flux change") +
 
 #violin plot with box plot
 ggplot(data.frame, aes(x = colname_x_in_data.frame, y=colname_y, fill=colname)) +
@@ -121,6 +127,11 @@ ggplot(plot_data, aes(fill=threshold, y= subsystem, x= count)) +
   geom_bar(position="fill", stat="identity") +
   ggtitle("subsystem eCDF value of cancer evolution model (TOP 95% of random permutation model)")  +
   labs(x='Probability', y='Subsystem', color="eCDF >= 0.95")
+
+# multiple 
+REf: https://m.blog.naver.com/regenesis90/222203859357
+sp + facet_wrap(vars(SUBSYSTEM), ncol=1)
+
 
 #additional thing
 sp + labs(x='xlab', y='ylab', color="color-level legend name")
