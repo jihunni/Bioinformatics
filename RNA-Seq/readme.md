@@ -205,3 +205,6 @@ $  kallisto quant -i homo_sapiens_index -o output_kallisto quiz_1.cutadapt.fastq
 
 # Reference
 - https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
+
+# Further analysis
+- network analysis : `GSEA`, `g:Profiler`, `EnrichmentMap Cytoscape App 3.5`
