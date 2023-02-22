@@ -32,6 +32,13 @@ rm()
 a <-1 : assignment
 a < -1 : boolian
 
+# assign the variable name with for loop
+Ref: https://stackoverflow.com/questions/35084427/how-to-change-column-names-in-dataframe-in-the-loop
+e.g. I have 10 (for example) dataframes with similar names like df1,df2,df3,... with 10 columns I'd like to give names for 10th column in each dataframe like dataframe name(10th column in df1 must has "df1" name, in df2 -- "df2" and etc)
+  commands <- sprintf('names(df%d)[10] <- "df%d"', 1:10, 1:10)
+  eval(parse(text = commands))
+
+
 # object identification
 typeof(obj)
 class(obj)
