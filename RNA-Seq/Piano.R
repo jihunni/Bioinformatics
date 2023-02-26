@@ -1,7 +1,10 @@
+# Installation
+BiocManager::install("rsbml") # with root authorization.
 BiocManager::install("piano", dependencies=TRUE)
 library(piano)
 ?piano
 ?runGSA
+
 
 GEM_liver_hepatocytes = loadGSC(liver_hepatocytes.xml)
 load('/R/default_working_directory/Resources/reporter metabolite assay/hmrGsc.RData')
