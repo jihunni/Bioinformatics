@@ -1,5 +1,17 @@
-# Installation
-BiocManager::install("rsbml") # with root authorization.
+# installation of libsbml
+Ref: https://synonym.caltech.edu/software/libsbml/libsbml-docs/installation/
+pip install python-libsbml
+
+/opt/R/4.1.2/bin/R CMD INSTALL /home/jihun/Downloads/libSBML_5.19.0.tar.gz
+
+# Installation of rsbml
+## Method 1
+BiocManager::install("rsbml") # it may not work.
+## MEthod 2
+Download 
+
+
+# INstallation of piano
 BiocManager::install("piano", dependencies=TRUE)
 library(piano)
 ?piano
