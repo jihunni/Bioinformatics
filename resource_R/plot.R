@@ -38,6 +38,14 @@ pheatmap(sampleDistMatrix,
 
 
 ###ggplot###
+# to convert dataframe shape (2D matrix --> 1D dataframe)
+plot_df = data.frame() #initialization
+for (iter in 1:dim(RXN_flux_change_plot_df)[1]){
+  flux = unlist(RXN_flux_change_plot_df[iter,])
+  temp_df = data.frame(RXNID=rownames(RXN_flux_change_plot_df)[iter], timestamp=1:30, flux=flux)
+  plot_df = rbind(plot_df, temp_df)
+}
+
 #line plot
 df = data.frame(
     method=c(rep('ideal',4), rep('reduction',4), rep('atomic',4)), 
