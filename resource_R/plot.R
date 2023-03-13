@@ -136,10 +136,10 @@ ggplot(plot_data, aes(fill=threshold, y= subsystem, x= count)) +
   ggtitle("subsystem eCDF value of cancer evolution model (TOP 95% of random permutation model)")  +
   labs(x='Probability', y='Subsystem', color="eCDF >= 0.95")
 
-# multiple 
+# subplot 
 REf: https://m.blog.naver.com/regenesis90/222203859357
 sp + facet_wrap(vars(SUBSYSTEM), ncol=1)
-
+sp + facet_grid(subgroup~., scales="free_y") +
 
 #additional thing
 sp + labs(x='xlab', y='ylab', color="color-level legend name")
