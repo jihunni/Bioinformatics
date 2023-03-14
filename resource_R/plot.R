@@ -292,9 +292,17 @@ data(iris)
 
 # Dimensional reduction ###
 #pca
-pca.out = prcomp(iris[,1:4])
+pca.out = prcomp(iris[,1:4], cen=T,sca=T)
+pca.result <- data.frame(X1 = pca.out$x[,1], X2 = pca.out$x[,2])
+summary(pca.out)
+pov <- pca.out$sdev^2/sum(pca.out$sdev^2) # Proportion of Vgithuariance
 plot(pca.out$x[,1:2], col=iris$Species, pch=16)
 
+ggplot(pca.result, aes(x=X1, y=X2, color = color)) +
+  geom_point(size=0.5, shape=16) +
+  theme_bw() +
+  ggtitle("PCA plot of Pan-cancer mutation timestamp") +
+  labs(x='PC1 (8.14% variance)', y='PC2 (4.26% variance)', color="study types") +
 
 # multidimensional scaling (MDS)
 iris.dist = dist((iris[,1:4]), method="euclidean")
