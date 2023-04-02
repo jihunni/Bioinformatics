@@ -306,7 +306,11 @@ lapply(files, function(x) {
   else {
     dir.create(folder)
   }
-          
-           
-           
-
+ 
+# Progress Bar
+pb = txtProgressBar(min = 1, max = dim(input_data_frame)[1], initial = 0, style = 3) 
+for (iter in 1:dim(input_data_frame)[1]){
+  something....
+  setTxtProgressBar(pb,iter)
+}
+close(pb)
