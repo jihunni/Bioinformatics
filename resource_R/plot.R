@@ -82,7 +82,7 @@ ggplot() +
 ggplot(dataframe, aes(x=colname1, y=colname2, color = padj_sex < 0.05 & padj_normal < 0.05)) +
     geom_point(size=2, shape=16) +
     scale_color_manual(values=c('green','red')) #color selection per group
-#boxplot
+# boxplot
 library(ggsignif)
 plot_df = data.frame(score=x, target=y)
   button10 =  dplyr::top_n(plot_df, -dim(plot_df)[1]*0.1,target) #lowest
@@ -99,7 +99,8 @@ ggplot(boxplot_data.frame, aes(x = sex, y=value)) +
 	 ## x : categorical variable ; 
 	 ## y : numerical variable
 
-# heatmap
+# heatmap (geom_title)
+## Ref (titles border) : https://stackoverflow.com/questions/53228917/geom-tile-clean-diagonal-tiles-border
 ggplot(data=plot_df, aes(x=timestamp, y=RXNID, fill=flux)) + # dataframe: timestamp (x-axis label), RNXID(y-axis label), flux(value)
   geom_tile() + 
   #scale_fill_gradientn(colors = hcl.colors(20, "bluered2"), na.value = 'black') +
