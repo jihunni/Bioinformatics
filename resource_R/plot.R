@@ -130,8 +130,8 @@ ggplot(plot_data.frame, aes(x=col_name1, y= col_name2)) +
 
 # Percent stacked barchart
 Ref : https://r-graph-gallery.com/48-grouped-barplot-with-ggplot2.html
-level_order = RXN_ecdf_Top95per_reduced_HMR_subsystem$SUBSYSTEM[order(RXN_ecdf_Top95per_reduced_HMR_subsystem$threshold_no_per)] # to sort y-axis in ggplot
-plot_data$subsystem = factor(plot_data$subsystem, levels = level_order)
+level_order = plot_df$subsystem[order(unique(plot_df$subsystem))] # to sort y-axis in ggplot
+plot_data$subsystem = factor(plot_data$subsystem, levels = rev(level_order))
 ggplot(plot_data, aes(fill=threshold, y= subsystem, x= count)) + 
   geom_bar(position="fill", stat="identity") +
   ggtitle("subsystem eCDF value of cancer evolution model (TOP 95% of random permutation model)")  +
